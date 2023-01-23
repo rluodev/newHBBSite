@@ -13,7 +13,7 @@
 }
 
 .content h2, .content a {
-  color: var(--orange);
+  color: var(--purple);
 }
 
 .content a {
@@ -82,8 +82,7 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: 'Anonymous Pro', monospace;
 }
 
 .content {
@@ -225,7 +224,7 @@
   padding: 10px;
   font-size: 24px;
   border-radius: 8px;
-  background-color: var(--orange);
+  background-color: var(--purple);
   border: none;
   color: white;
   cursor: pointer;
@@ -245,7 +244,7 @@
   border-radius: 8px;
   background: black;
   margin-bottom: 16px;
-  border: 2px solid var(--orange);
+  border: 2px solid var(--purple);
   color: white;
   cursor: pointer;
   font-family: var(--font-stack);
@@ -262,7 +261,7 @@
   padding: 10px;
   font-size: 24px;
   border-radius: 8px;
-  background-color: var(--orange);
+  background-color: var(--purple);
   border: none;
   color: white;
   cursor: pointer;
@@ -270,7 +269,7 @@
   margin-bottom: 16px;
   transition: 0.3s all;
   outline: none;
-  border: 2px solid var(--orange)
+  border: 2px solid var(--purple)
 }
 
 .input:focus, .input:focus-within {

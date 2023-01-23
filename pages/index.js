@@ -61,14 +61,14 @@ export default function Home() {
   return (
     <>
     <Modal visible={modal} setVisible={setModal}>
-      <iframe src="https://bank.hackclub.com/donations/start/hackoc" style={{
+      <iframe src="https://bank.hackclub.com/donations/start/hackbackbetter" style={{
         width: '100%',
         height: '100%',
         border: 'none',
         borderRadius: '8px',
         border: '2px solid var(--orange)'
       }} onLoad={e => {
-        if (!e.target.src.endsWith('donations/start/hackoc')) splitbee.track("Donation", {
+        if (!e.target.src.endsWith('donations/start/hackbackbetter')) splitbee.track("Donation", {
           url: e.target.src
         });
       }}>
@@ -81,13 +81,13 @@ export default function Home() {
       overflow: 'hidden'
     }}>
       <Head>
-        <title>Hack OC - Orange County's high school hackathon</title>
+        <title>HackBackBetter 2023</title>
         <meta name="description" content={meta_desc} />
         <link rel="icon" href="/favicon.ico" />
         <meta key="og_locale" property="og:locale" content="en_US" />
         <meta key="og_type" property="og:type" content="website" />
-        <meta key="og_site" property="og:site_name" content="Hack OC" />
-        <meta key="og_title" property="og:title" content="Hack OC - Orange County's high school hackathon" />
+        <meta key="og_site" property="og:site_name" content="HackBackBetter 2023" />
+        <meta key="og_title" property="og:title" content="HackBackBetter 2023" />
         <meta key="desc" name="description" content={meta_desc} />
         <meta key="og_desc" property="og:description" content={meta_desc} />
         <meta key="tw_desc" name="twitter:description" content={meta_desc} />
@@ -105,18 +105,7 @@ export default function Home() {
           overflow: 'hidden'
         }}>
           <h1 className={styles.title}> 
-            Hack <span className="color-orange" style={{
-              marginLeft: '-12px',
-              position: 'relative'
-            }}>
-              OC
-              <img src="/orange.svg" style={{
-                position: 'absolute',
-                bottom: '50%',
-                left: '0px',
-                transform: 'translate(10%, 44.5%)'
-              }} className="noselect" />
-            </span>
+            HackBackBetter
           </h1>
           <video
             autoPlay
@@ -141,20 +130,13 @@ export default function Home() {
           <source src={`https://stream.mux.com/${timelapseId}/medium.mp4`} />
         </video>
         <p className={styles.description}>
-          <span className="color-orange">
-            <b>
-              <Icon glyph="pin" size={32} style={{
-                transform: 'translate(2px, 6px)'
-              }} />
-              Orange County
-            </b>
-          </span>'s First Post-Pandemic Hackathon
+          An in-person hackathon aimed towards new and intermediate-level hackers!
         </p>
         <center style={{
           position: 'relative',
           height: '55px'
         }}>
-          <p style={{opacity: submitted ? 1 : 0.7, color: submitted ? 'rgb(34, 191, 116)' : 'white'}}>{submitted ? 'Thank you! Expect to hear from us soon. 👀' : 'Be the first to hear when registration opens!'}</p>
+          <p style={{opacity: submitted ? 1 : 0.7, color: submitted ? 'rgb(134, 30, 160)' : 'white'}}>{submitted ? 'Thank you! Expect to hear from us soon. 👀' : 'Be the first to hear when registration opens!'}</p>
           {!submitted &&
         <center className={styles.inputCenter} style={{
           display: 'block',
@@ -176,7 +158,7 @@ export default function Home() {
             width: '300px'
           }}>
           <div className={styles.input} style={{
-            background:  'rgba(var(--orange-3-values), 0.3)',
+            background:  'rgba(var(--purple-3-values), 0.3)',
             cursor: 'text',
             textAlign: 'center',
             transform: 'translate(0px, 0px)',
@@ -211,7 +193,7 @@ export default function Home() {
             height: '40px',
             fontSize: '20px',
             padding: '6px',
-            border: '1px solid var(--orange)',
+            border: '1px solid var(--purple)',
             marginLeft: '20px',
             position: 'absolute',
             borderRadius: '2px',
@@ -240,8 +222,8 @@ export default function Home() {
             position: 'relative',
             zIndex: '20'
           }} className={styles.innerContent}>
-          <h2>What's Hack OC?</h2>
-          <p>Hack OC is the first in-person high school hackathon after the pandemic in Orange County, California. We're inviting you and all high schoolers to participate in <span>12 hours</span> of <span>coding</span>, <span>building</span>, <span>learning</span>, and <span>sharing</span>. Whether you're technical and experienced or haven't ever written a line of code, Hack OC will be a fun and welcoming event for everyone.</p>
+          <h2>What is HackBackBetter?</h2>
+          <p>HackBackBetter is a high school hackathon aimed towards new and intermediate-level hackers. We're inviting you and all high schoolers to participate in <span>12 hours</span> of <span>coding</span>, <span>building</span>, <span>learning</span>, and <span>sharing</span>. Whether you're technical and experienced or haven't ever written a line of code, Hack OC will be a fun and welcoming event for everyone.</p>
           <h2>What's a "hackathon"?</h2>
           <p>Hackathons are in-person coding events where teenagers come together to learn new skills, create fun projects, and make memories. There's also food, snacks, and drinks to fuel your creativity. Instead of hacking bank accounts like you hear in the news, you'll build something meaningful to you.</p>
           <h2>Who can participate in Hack OC?</h2>
@@ -266,7 +248,7 @@ export default function Home() {
       }}>
         <a href="/register" disabled={"true"} target="_blank" onClick={e => e.preventDefault()}>
           <button className={styles.altButton} style={{
-            background:  'rgba(var(--orange-3-values), 0.3)',
+            background:  'rgba(var(--purple-3-values), 0.3)',
             cursor: 'default',
             transform: 'translate(0px, 0px)'
           }}>Sign-Ups Open Soon!</button>
@@ -284,7 +266,7 @@ export default function Home() {
           <button className={styles.altButton}>GitHub</button>
         </a>
         <h1>Sponsors</h1>
-        <p>Hack OC wouldn't be possible without help from our sponsors. Want to help make Hack OC incredible? Email us at <a href="mailto:team@hackoc.org" style={{ color: 'var(--orange)', textDecoration: 'underline' }} data-splitbee-event="Email Click" data-splitbee-event-location="sidebar">team@hackoc.org</a> or check out our <a href="/prospectus" style={{ color: 'var(--orange)', textDecoration: 'underline' }} target="_blank" onClick={e => {
+        <p>Hack OC wouldn't be possible without help from our sponsors. Want to help make Hack OC incredible? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--purple)', textDecoration: 'underline' }} data-splitbee-event="Email Click" data-splitbee-event-location="sidebar">sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
           e.preventDefault();
           splitbee.track("Prospectus Download", {
             ...(email ? { email } : {})
@@ -299,7 +281,7 @@ export default function Home() {
         <a href="https://vercel.com">
         <img className={styles.sponsor} src="/sponsor-assets/vercel.svg" />
         </a>
-        <a href="https://bank.hackclub.com/hackoc/donations" target="_blank">
+        <a href="https://bank.hackclub.com/hackbackbetter/donations" target="_blank">
         <div style={{
           width: '300px',
           maxWidth: '100%',
@@ -335,7 +317,7 @@ export default function Home() {
       <div style={{
         background: '#ddd',
         fontWeight: '300',
-        fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif',
+        fontFamily: '\'Anonymous Pro\', monospace',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
@@ -343,23 +325,23 @@ export default function Home() {
         flexDirection: 'column'
       }} className={styles.bottomFooter}>
         <div>
-          Hack OC is fiscally sponsored by The Hack Foundation.
+          HackBackBetter is fiscally sponsored by The Hack Foundation.
           Nonprofit EIN: 81-2908499.
         </div>
         <div style={{ marginTop: '10px', marginBottom: '-8px' }}>
-          <a href="https://instagram.com/hack.oc" data-splitbee-event="Instagram Click" data-splitbee-event-location="footer">
+          <a href="https://instagram.com/" data-splitbee-event="Instagram Click" data-splitbee-event-location="footer">
             <Icon glyph='instagram' size={32} />
           </a>
-          <a href="https://github.com/hackoc" data-splitbee-event="GitHub Click" data-splitbee-event-location="footer">
+          <a href="https://github.com" data-splitbee-event="GitHub Click" data-splitbee-event-location="footer">
             <Icon glyph='github' size={32} />
           </a>
-          <a href="https://bank.hackclub.com/hackoc" data-splitbee-event="Finances Click" data-splitbee-event-location="footer">
+          <a href="https://bank.hackclub.com/hackbackbetter" data-splitbee-event="Finances Click" data-splitbee-event-location="footer">
             <Icon glyph='bank-account' size={32} />
           </a>
-          <a href="mailto:team@hackoc.org" data-splitbee-event="Email Click" data-splitbee-event-location="footer">
+          <a href="mailto:info@hackbackbetter.live" data-splitbee-event="Email Click" data-splitbee-event-location="footer">
             <Icon glyph='email' size={32} />
           </a>
-          <a href="https://twitter.com/letshackoc" data-splitbee-event="Twitter Click" data-splitbee-event-location="footer">
+          <a href="https://twitter.com" data-splitbee-event="Twitter Click" data-splitbee-event-location="footer">
             <Icon glyph='twitter' size={32} />
           </a>
         </div>

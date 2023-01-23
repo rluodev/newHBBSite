@@ -1,8 +1,9 @@
 * {
   --orange: #fa7b33;
+  --purple: #1E1682;
   --orange-3-values: 250, 123, 51;
-  --font-stack: 'Readex Pro', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --purple-3-values: 30, 22, 130;
+  --font-stack: 'Anonymous Pro', monospace;
 }
 
 html,
@@ -34,6 +35,10 @@ a {
 
 .color-orange { 
   color: #FA7B33;
+}
+
+.color-purple { 
+  color: #1E1682;
 }
 
 .color-charcoal {

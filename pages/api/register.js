@@ -22,7 +22,7 @@ client.connect(err => {
 
 async function email (email, name) {
   const token = `Bearer ${process.env.MAIL_KEY}`;
-  const res = await fetch('https://api.hackoc.org/mail/v1/authed/deliver/register', {
+  const res = await fetch('https://api.hackbackbetter.live/mail/v1/authed/deliver/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -85,7 +85,7 @@ export default async function handler(req, res) {
         const existingRecord = (await collection.findOne({
           Email: data["Email"]
         }));
-        if (existingRecord) return res.status(422).json({ message: "This email has already registered for Hack OC." });
+        if (existingRecord) return res.status(422).json({ message: "This email has already registered for HackBackBetter." });
         console.log(await collection.insertOne(data));
         client.close();
         // Return 200 if everything is successful

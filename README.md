@@ -1,5 +1,5 @@
-# Hack OC Website
+# HackBackBetter Website
 
-Website for Orange County's first high school hackathon!
+Website for HackBackBetter!
 
 Built with next.js and deployed on Vercel
