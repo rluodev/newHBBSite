@@ -21,7 +21,7 @@ export function dbConnect() {
 
 async function email(email, name) {
 	const token = `Bearer ${process.env.MAIL_KEY}`;
-	const res = await fetch('https://api.hackbackbetter.live/mailv1/authed/deliver/register', {
+	const res = await fetch('https://api.hackbackbetter.live/mail/v1/authed/deliver/register', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
@@ -58,7 +58,7 @@ export default async function handler(req, res) {
 		try {
 			// Ping the google recaptcha verify API to verify the captcha code you received
 			console.log('Captcha code: ', captcha);
-			console.log('Captcha secret length: ', process.env.RECAPTCHA_SECRET.length);
+			console.log('Captcha secret: ', process.env.RECAPTCHA_SECRET_KEY);
 			const response = await fetch(
 				`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captcha}`,
 				{
