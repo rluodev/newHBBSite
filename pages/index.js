@@ -5,8 +5,8 @@ import Modal from '../components/Modal'
 import { useEffect, useState } from 'react';
 import splitbee from '@splitbee/web';
 
-const meta_desc = "Orange County's first high school coding event since the pandemic. Join us for 12 hours of hacking, workshops, & friendship.";
-const theme_color = '#FA7B33';
+const meta_desc = "An in-person hackathon aimed towards new and intermediate-level hackers! Join us April 22-23 for 2 days of fun and hacking!";
+const theme_color = '#1E1682';
 const social_image = '/social.png';
 
 const regex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
@@ -66,7 +66,7 @@ export default function Home() {
         height: '100%',
         border: 'none',
         borderRadius: '8px',
-        border: '2px solid var(--orange)'
+        border: '2px solid var(--purple)'
       }} onLoad={e => {
         if (!e.target.src.endsWith('donations/start/hackbackbetter')) splitbee.track("Donation", {
           url: e.target.src
@@ -229,10 +229,10 @@ export default function Home() {
           <h2>Who can participate in Hack OC?</h2>
           <p>We're inviting all high school students to participate in Hack OC <span>completely free</span>. If you'd still like to support us, however, <a href="#" onClick={e => { e.preventDefault(); setModal(true); splitbee.track("Donate Click", { location: 'copy' }); }}>you can donate here</a>. Since this hackathon is geared toward just high school students, we aren't allowing any college students or older to participate.</p>
           <h2>Will there be prizes? 👀</h2>
-          <p>Yes! We're thrilled about them and can't wait to make an announcement soon. More about judging and prizes will be shared closer to the event. Why not <a href="#" style={{ textDecoration: 'underline', color: 'var(--orange)' }} data-splitbee-event="Interaction" data-splitbee-event-type="scroll-to-top">drop your email</a> so we can let you know? We promise it's worth your time!</p>
+          <p>Yes! We're thrilled about them and can't wait to make an announcement soon. More about judging and prizes will be shared closer to the event. Why not <a href="#" style={{ textDecoration: 'underline', color: 'var(--purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="scroll-to-top">drop your email</a> so we can let you know? We promise it's worth your time!</p>
           </div>
 
-      <img src="/orange.png" style={{
+      <img src="/x.png" style={{
         position: 'absolute',
         bottom: '-20px',
         right: '-40px',
@@ -266,7 +266,7 @@ export default function Home() {
           <button className={styles.altButton}>GitHub</button>
         </a>
         <h1>Sponsors</h1>
-        <p>Hack OC wouldn't be possible without help from our sponsors. Want to help make Hack OC incredible? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--purple)', textDecoration: 'underline' }} data-splitbee-event="Email Click" data-splitbee-event-location="sidebar">sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
+        <p>HackBackBetter wouldn't be possible without help from our sponsors. Want to help make HackBackBetter incredible? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--purple)', textDecoration: 'underline' }} data-splitbee-event="Email Click" data-splitbee-event-location="sidebar">sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
           e.preventDefault();
           splitbee.track("Prospectus Download", {
             ...(email ? { email } : {})
