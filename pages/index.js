@@ -279,11 +279,14 @@ export default function Home() {
         }}>prospectus</a> to get involved!</p>
         <br />
         <h2>SPECIAL THANKS TO</h2>
-        <a href="https://hackclub.com/bank">
-        <img className={styles.sponsor} src="/sponsor-assets/bank.svg" />
+        <a href="https://doordash.com/">
+        <img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
         </a>
-        <a href="https://vercel.com">
-        <img className={styles.sponsor} src="/sponsor-assets/vercel.svg" />
+        <a href="https://wolfram.com">
+        <img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/WolframLogo.png" />
+        </a>
+        <a href="https://echo3d.com">
+        <img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
         </a>
         <a href="https://bank.hackclub.com/hackbackbetter/donations" target="_blank">
         <div style={{
