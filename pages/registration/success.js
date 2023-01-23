@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 import Modal from '../../components/Modal';
 
 function sendEmail () {
-    // fetch('http://mail2.hackoc.org')
 }
 
 export default function Success () {
@@ -39,7 +38,7 @@ export default function Success () {
                 textAlign: 'center',
                 position: 'relative'
             }}>
-                <img src="/logo-full-light.png" style={{ maxWidth: '50%', position: 'absolute', bottom: '2rem', right: '2rem' }} />
+                <img src="https://cdn.hackbackbetter.live/logo-full-light.png" style={{ maxWidth: '50%', position: 'absolute', bottom: '2rem', right: '2rem' }} />
                 <h1 style={{ marginBottom: '0px' }}>You're registered{name ? `, ${name}` : ''}!</h1>
                 <p>Next, you'll sign the event forms. We'll reach out to you when we're ready.</p>
                 <p>In the meantime, join our <a href="/discord" target="_blank" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>Discord server</a> to meet other hackers. Announcements and judging will happen through Discord, so it's important you join ahead of time.</p>
