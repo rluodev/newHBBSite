@@ -1,0 +1,86 @@
+* {
+  --orange: #fa7b33;
+  --orange-3-values: 250, 123, 51;
+  --font-stack: 'Readex Pro', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-stack);
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ .noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.color-orange { 
+  color: #FA7B33;
+}
+
+.color-charcoal {
+  color: #222;
+}
+
+.background-charcoal {
+  background: rgba(34, 34, 34, 0.8);
+}
+
+.color-white {
+  color: white;
+}
+
+.tooltipped:after {
+  opacity: 0;
+  color: white;
+  letter-spacing: 0;
+  line-height: 1.375;
+  transform: translateY(50%);
+  box-shadow: 0 0 2px 0 #00000010,
+    0 4px 8px 0 #00000020;
+  content: attr(aria-label);
+  z-index: 10;
+  left: 100%;
+  bottom: 50%;
+  min-height: 20px;
+  position: absolute;
+  padding: 0.25rem 0.75rem;
+  background-color: #000000df;
+  border-radius: 6px;
+  font-family: Inter;
+  font-size: 14px;
+  max-width: 240px;
+  font-weight: 500;
+  transition: 0.15s all ease;
+  width: max-content;
+  height: min-content;
+  right: 0;
+  pointer-events: none;
+  word-wrap: break-word;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+.tooltipped:hover:after {
+  outline: none;
+  z-index: 9;
+  opacity: 1;
+}
