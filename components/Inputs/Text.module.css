@@ -8,7 +8,7 @@
     padding: 0.5em;
     font-size: 1em;
     font-weight: 500;
-    font-family: system-ui, Inter;
+    font-family: 'Anonymous Pro', monospace;
 }
 
 .wrapper input:hover {
@@ -42,13 +42,13 @@
 
 .wrapper input:focus {
     outline: none;
-    border-color: var(--orange);
-    box-shadow: 0 0 0 2px rgba(var(--orange-3-values), 0.2)
+    border-color: var(--purple);
+    box-shadow: 0 0 0 2px rgba(var(--purple-3-values), 0.2)
 }
 
 .wrapper {
     min-width: 200px;
-    font-family: system-ui, Inter;
+    font-family: 'Anonymous Pro', monospace;
     position: relative;
 }
 
@@ -123,7 +123,7 @@
     padding: 0.25rem 0.75rem;
     background-color: #000000df;
     border-radius: 6px;
-    font-family: Inter;
+    font-family: 'Anonymous Pro', monospace;
     font-size: 14px;
     max-width: 240px;
     font-weight: 500;

@@ -38,7 +38,7 @@ export default function Modal ({ visible, setVisible, children, hideCloseButton 
                         right: '-40px',
                         width: '30px',
                         height: '30px',
-                        background: 'var(--orange)',
+                        background: 'var(--l-purple)',
                         zIndex: '1002',
                         borderRadius: '8px',
                         display: "flex",

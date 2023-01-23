@@ -193,7 +193,7 @@ export default function Register() {
                     left: '0px',
                     zIndex: '10',
                     // CHANGE THE BELOW!!!
-                    background: i % 4 === 1 ? 'url("https://cloud-2zvigj1zd-hack-club-bot.vercel.app/0water.jpeg")' : undefined,
+                    background: i % 4 === 1 ? 'url("https://cdn.hackbackbetter.live/backgroundimg.jpg")' : undefined,
                     backgroundSize: 'cover',
 
                   }}></div>

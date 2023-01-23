@@ -275,7 +275,7 @@ export default function Home() {
           splitbee.track("Prospectus Download", {
             ...(email ? { email } : {})
           });
-          window.open('/prospectus');
+          window.open('https://cdn.hackbackbetter.live/prospectus');
         }}>prospectus</a> to get involved!</p>
         <br />
         <h2>SPECIAL THANKS TO</h2>

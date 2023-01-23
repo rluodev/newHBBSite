@@ -4,7 +4,7 @@
     border: none;
     font-size: 1em;
     font-weight: 500;
-    font-family: system-ui, Inter;
+    font-family: 'Anonymous Pro', monospace;
 }
 
 .wrapper div.content input {
@@ -26,7 +26,7 @@
     gap: 0.5rem;
     padding: 0.5rem;
     font-weight: 500;
-    font-family: system-ui, Inter;
+    font-family: 'Anonymous Pro', monospace;
     z-index: 20;
     position: relative;
 }
@@ -66,8 +66,8 @@
 
 .wrapper div.content:focus-within {
     outline: none;
-    border-color: var(--orange);
-    box-shadow: 0 0 0 2px rgba(var(--orange-3-values), 0.2)
+    border-color: var(--purple);
+    box-shadow: 0 0 0 2px rgba(var(--purple-3-values), 0.2)
 }
 
 .wrapper {
@@ -198,7 +198,7 @@
     padding: 0.25rem 0.75rem;
     background-color: #000000df;
     border-radius: 6px;
-    font-family: Inter;
+    font-family: 'Anonymous Pro', monospace;
     font-size: 14px;
     max-width: 240px;
     font-weight: 500;
@@ -238,7 +238,7 @@
     font-size: 1em;
     cursor: default;
     font-weight: 500;
-    font-family: Inter;
+    font-family: 'Anonymous Pro', monospace;
     overflow-y: hidden;
     z-index: 30;
     background-color: white;
