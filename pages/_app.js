@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <Script 
         defer 
-        data-domain="hackoc.org"
+        data-domain="hackbackbetter.live"
         src="https://plausible.io/js/plausible.js"
       />
       <Script

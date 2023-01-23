@@ -8,7 +8,7 @@ import Select from '../components/Inputs/Select.js';
 import { questions, sections } from '../lib/questions.js';
 import { createRef, useEffect, useState } from 'react';
 
-const meta_desc = "A real, in-person hackathon in San Jose, CA. Join us for 2 days of fun, hacking, and more fun!";
+const meta_desc = "An in-person hackathon in San Jose, CA. Join us for 2 days of fun, hacking, and more fun!";
 const theme_color = '#1E1682';
 const social_image = '/social.png';
 
