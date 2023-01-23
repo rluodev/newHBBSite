@@ -80,8 +80,7 @@
   border-radius: 5px;
   padding: 0.75rem;
   font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-family: 'Anonymous Pro', monospace;
 }
 
 .content {
@@ -226,7 +225,7 @@
   padding: 10px;
   font-size: 24px;
   border-radius: 8px;
-  background-color: var(--purple);
+  background-color: var(--crimson);
   border: none;
   color: white;
   cursor: pointer;
@@ -246,7 +245,7 @@
   border-radius: 8px;
   background: black;
   margin-bottom: 16px;
-  border: 2px solid var(--pruple);
+  border: 2px solid var(--crimson);
   color: white;
   cursor: pointer;
   font-family: var(--font-stack);
