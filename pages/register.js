@@ -162,6 +162,7 @@ export default function Register() {
       <meta key="og_img" property="og:image" content={social_image} />
       <meta key="tw_card" name="twitter:card" content="summary_large_image" />
       <meta key="tw_img" name="twitter:image" content={social_image} />
+      <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet" /> 
     </Head>
 
 
@@ -312,7 +313,7 @@ borderColor: '#d3d3d4',
 borderWidth: '2px',
 borderStyle: 'solid',
 fontSize: '1em',
-fontFamily: 'system-ui, Inter',
+fontFamily: '\'Anonymous Pro\', monospace',
 padding: '0.5rem',
 cursor: valid.valid ? 'pointer' : 'default'
             }} onClick={valid.valid ? handleSubmit : () => {
