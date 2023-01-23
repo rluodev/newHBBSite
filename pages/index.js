@@ -223,13 +223,17 @@ export default function Home() {
             zIndex: '20'
           }} className={styles.innerContent}>
           <h2>What is HackBackBetter?</h2>
-          <p>HackBackBetter is a high school hackathon aimed towards new and intermediate-level hackers. We're inviting you and all high schoolers to participate in <span>12 hours</span> of <span>coding</span>, <span>building</span>, <span>learning</span>, and <span>sharing</span>. Whether you're technical and experienced or haven't ever written a line of code, Hack OC will be a fun and welcoming event for everyone.</p>
+          <p>HackBackBetter is a high school hackathon aimed towards new and intermediate-level hackers. We're inviting you and all high schoolers to participate in <span>2 days</span> of <span>coding</span>, <span>learning</span>, and <span>sharing</span>. Whether or not you've ever touched a line of code before, HackBackBetter will be a fun and enriching event for all.</p>
           <h2>What's a "hackathon"?</h2>
-          <p>Hackathons are in-person coding events where teenagers come together to learn new skills, create fun projects, and make memories. There's also food, snacks, and drinks to fuel your creativity. Instead of hacking bank accounts like you hear in the news, you'll build something meaningful to you.</p>
-          <h2>Who can participate in Hack OC?</h2>
-          <p>We're inviting all high school students to participate in Hack OC <span>completely free</span>. If you'd still like to support us, however, <a href="#" onClick={e => { e.preventDefault(); setModal(true); splitbee.track("Donate Click", { location: 'copy' }); }}>you can donate here</a>. Since this hackathon is geared toward just high school students, we aren't allowing any college students or older to participate.</p>
+          <p>Hackathons are in-person coding events where people come together to learn new skills, create fun projects, and make memories. There's also food, snacks, and drinks to fuel your creativity. Instead of hacking bank accounts like you hear in the news, you'll build something meaningful to you.</p>
+          <h2>Who can participate in HackBackBetter?</h2>
+          <p>We're inviting all high school students to participate in HackBackBetter <span>completely free</span>. If you'd still like to support us, however, <a href="#" onClick={e => { e.preventDefault(); setModal(true); splitbee.track("Donate Click", { location: 'copy' }); }}>you can donate here</a>. Since we're a high-school and below hackathon, college/university students won't be able to attend.</p>
           <h2>Will there be prizes? 👀</h2>
-          <p>Yes! We're thrilled about them and can't wait to make an announcement soon. More about judging and prizes will be shared closer to the event. Why not <a href="#" style={{ textDecoration: 'underline', color: 'var(--purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="scroll-to-top">drop your email</a> so we can let you know? We promise it's worth your time!</p>
+          <p>Yes! Prizes are listed on our DevPost page, and we'll be updating them to the full list of prizes once we are ready! Why don't you <a href="#" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="scroll-to-top">drop your email</a> so we can let you know when our prizes are fully available? We promise we won't spam you!</p>
+          <h2>What are the themes of HackBackBetter?</h2>
+          <p>There are two main themes for HackBackBetter 2023. The first is <span>returning from COVID-19</span>, and the second is <span>environmental preservation</span>.</p>
+          <h2>When and where is HackBackBetter 2023 taking place?</h2>
+          <p>HackBackBetter 2023 will take place on April 22nd-23rd at the South Bay Yacht Club in Alviso, CA (Location subject to change).</p>
           </div>
 
       <img src="/x.png" style={{
@@ -266,7 +270,7 @@ export default function Home() {
           <button className={styles.altButton}>GitHub</button>
         </a>
         <h1>Sponsors</h1>
-        <p>HackBackBetter wouldn't be possible without help from our sponsors. Want to help make HackBackBetter incredible? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--purple)', textDecoration: 'underline' }} data-splitbee-event="Email Click" data-splitbee-event-location="sidebar">sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
+        <p>HackBackBetter wouldn't be possible without help from our sponsors. Want to help make HackBackBetter incredible? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} data-splitbee-event="Email Click" data-splitbee-event-location="sidebar">sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
           e.preventDefault();
           splitbee.track("Prospectus Download", {
             ...(email ? { email } : {})
