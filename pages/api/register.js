@@ -22,7 +22,7 @@ client.connect(err => {
 
 async function email (email, name) {
   const token = `Bearer ${process.env.MAIL_KEY}`;
-  const res = await fetch('https://api.hackbackbetter.live/mail/v1/authed/deliver/register', {
+  const res = await fetch('https://api.hackbackbetter.live/mailv1/authed/deliver/register', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

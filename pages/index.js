@@ -49,12 +49,12 @@ export default function Home() {
   const [donor, setDonor] = useState('');
   useEffect(() => {
     fetch('/api/donor').then(res => res.text()).then(setDonor);
-    if (!localStorage.getItem('hackoc-analytics')) {
+    if (!localStorage.getItem('hackbackbetter-analytics')) {
       fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
         splitbee.user.set({
           city: geo.city
         });
-        localStorage.setItem('hackoc-analytics', true);
+        localStorage.setItem('hackbackbetter-analytics', true);
       });
     }
   }, []);
