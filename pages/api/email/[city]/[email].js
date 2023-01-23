@@ -9,5 +9,6 @@ export default async function (req, res) {
             ip_city: req.query.city
         })
     });
+    // test
     res.send('OK')
 }
