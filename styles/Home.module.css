@@ -12,7 +12,7 @@
 }
 
 .content h2, .content a {
-  color: var(--purple);
+  color: var(--l-purple);
 }
 
 .content a {
