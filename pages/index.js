@@ -156,7 +156,7 @@ export default function Home() {
 							position: 'relative',
 							height: '55px'
 						}}>
-							<p style={{ opacity: submitted ? 1 : 0.7, color: submitted ? 'rgb(134, 30, 160)' : 'white' }}>{submitted ? 'Thank you! Expect to hear from us soon. 👀' : 'Be the first to hear when registration opens!'}</p>
+							<p style={{ opacity: submitted ? 1 : 0.7, color: submitted ? 'rgb(134, 30, 160)' : 'white' }}>{submitted ? 'Thank you! Expect to hear from us soon. 👀' : 'Sign up for updates about the hackathon!'}</p>
 							{!submitted &&
 								<center className={styles.inputCenter} style={{
 									display: 'block',
@@ -249,7 +249,7 @@ export default function Home() {
 							<h2>Who can participate in HackBackBetter?</h2>
 							<p>We're inviting all high school students to participate in HackBackBetter <span>completely free</span>. If you'd still like to support us, however, <a href="#" onClick={e => { e.preventDefault(); setModal(true); splitbee.track("Donate Click", { location: 'copy' }); }}>you can donate here</a>. Since we're a high-school and below hackathon, college/university students won't be able to attend.</p>
 							<h2>Will there be prizes? 👀</h2>
-							<p>Yes! Prizes are listed on <a href="https://hackbackbetter.devpost.com/" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="devpost-click">our DevPost page</a>, and we'll be updating them to the full list of prizes once we are ready! Why don't you <a href="#" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="scroll-to-top">drop your email</a> so we can let you know when our prizes are fully available? We promise we won't spam you!</p>
+							<p>Yes! Prizes are listed on <a href="https://hackbackbetter.devpost.com/" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="devpost-click">our DevPost page</a>, and we'll be updating them to the full list of prizes once we are ready! Why don't you <a href="#" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="scroll-to-top">drop your email</a> so we can keep you updated? We promise we won't spam you!</p>
 							<h2>What are the themes of HackBackBetter?</h2>
 							<p>There are two main themes for HackBackBetter 2023. The first is <span>returning from COVID-19</span>, and the second is <span>environmental preservation</span>.</p>
 							<h2>When and where is HackBackBetter 2023 taking place?</h2>
@@ -263,12 +263,12 @@ export default function Home() {
 				<div className={styles.sponsors} style={{
 					overflowY: 'scroll'
 				}}>
-					<a href="/register" disabled={"true"} target="_blank" onClick={e => e.preventDefault()}>
+					<a href="/register" disabled={"false"} target="_blank" onClick={e => e.preventDefault()}>
 						<button className={styles.altButton} style={{
 							background: 'rgba(var(--purple-3-values), 0.3)',
 							cursor: 'default',
 							transform: 'translate(0px, 0px)'
-						}}>Sign-Ups Open Soon!</button>
+						}}>Register here!</button>
 					</a>
 					<button className={styles.altButton} onClick={() => {
 						setModal(true);
