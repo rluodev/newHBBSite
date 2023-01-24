@@ -18,6 +18,7 @@ export default function Admin() {
 					city: geo.city
 				})
 			}).then(async (response) => {
+				console.log(response);
 				if (response.ok) {
 					const cookie = await response.json();
 					// If the response is ok, set the token in the local storage
@@ -70,7 +71,7 @@ export default function Admin() {
 					/>
 				</label>
 				<br />
-				<button type="submit" onSubmit={handleSubmita}>Log in</button>
+				<button type="submit" onSubmit={e => { e.preventDefault(); handleSubmita()}}>Log in</button>
 			</form>
 		</>
 	);
