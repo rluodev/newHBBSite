@@ -98,6 +98,7 @@ export default async function handler(req, res) {
 				if (existingRecord) return res.status(422).json({ message: "This email has already registered for HackBackBetter." });
 				console.log(data);
 				data["uuid"] = uuidv4();
+				data["ticketed"] = false;
 				console.log(data["uuid"]);
 				console.log(await collection.insertOne(data));
 				client.close();
