@@ -71,7 +71,7 @@ export default function Admin() {
 					/>
 				</label>
 				<br />
-				<button type="submit" onSubmit={e => { e.preventDefault(); handleSubmita()}}>Log in</button>
+				<button type="submit" onClick={e => { e.preventDefault(); handleSubmita()}}>Log in</button>
 			</form>
 		</>
 	);
