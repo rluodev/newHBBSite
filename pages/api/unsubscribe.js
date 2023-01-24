@@ -60,6 +60,7 @@ export default async function handler(req, res) {
 			 */
 			if (captchaValidation.success) {
 				console.log("Successful validation");
+				console.log(data);
 				// Replace this with the API that will save the data received
 				// to your backend
 				const client = await dbPromise;

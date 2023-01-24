@@ -40,7 +40,7 @@ export default async function (req, res) {
     }));
     if (existingRecord) return res.status(422).json({ message: "This email is already subscribed." });
     console.log("New subscription: " + email + " in " + city);
-    console.log(await collection.insertOne({Email: email, City: city}));
+    console.log(await collection.insertOne({Email: email}));
     client.close();
     // Return 200 if everything is successful
     try {

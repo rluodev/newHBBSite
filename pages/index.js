@@ -32,8 +32,7 @@ export default function Home() {
 						'Content-Type': 'application/json'
 					},
 					body: JSON.stringify({
-						email,
-						city: geo.city
+						email
 					})
 				}).then(async (response) => {
 					if (response.ok) {
@@ -47,6 +46,8 @@ export default function Home() {
 							throw new Error(error.message)
 						} catch (error) {
 							alert(error?.message || "Something went wrong");
+						} finally {
+							setLoading(false);
 						}
 					}
 				});
