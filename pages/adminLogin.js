@@ -25,7 +25,7 @@ export default function Admin() {
 					try {
 						localStorage.setItem('token', cookie.message);
 						window.location.href = '/admin';
-					} catch (error) {
+					} catch (err) {
 						alert("Failed to set auth token in local storage. Please make sure cookies are enabled.");
 						console.log("Failed to set auth token in local storage. Please make sure cookies are enabled.");
 					}
