@@ -94,14 +94,15 @@ export default async function handler(req, res) {
 				}));
 				if (existingRecord) return res.status(422).json({ message: "This email has already registered for HackBackBetter." });
 				console.log(data);
-				data["uuid"] = uuidv4().toString;
-				console.log(data);
+				data["uuid"] = uuidv4().toString();
+				console.log(data["uuid"]);
 				console.log(await collection.insertOne(data));
 				client.close();
 				// Return 200 if everything is successful
 				try {
 					await email(data["Email"], data["Full Name"], data["uuid"]);
 				} catch (err) {
+					console.log(err);
 					return res.status(422).json({ message: "We had trouble sending you an email. Please report this error." });
 				}
 				return res.status(200).send("OK");
