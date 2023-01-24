@@ -65,7 +65,7 @@ export default function Admin() {
 				<label>
 					Auth Token:
 					<input
-						type="text"
+						type="password"
 						placeholder="Your auth token here..."
 						onChange={e => setToken(e.target.value)}
 					/>
