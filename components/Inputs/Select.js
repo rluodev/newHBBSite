@@ -213,14 +213,14 @@ export default function Select (props) {
 							if (!displayedPresetChips.length && !custom) return;
                             theseChips.splice(index, 1);
                             if (multiSelect) theseChips.push({
-                                name: activeChip.name,
-                                color: activeChip.color,
+                                name: chip.name,
+                                color: chip.color,
                                 id: localData.toLowerCase().split(' ').join('-')
                             });
 							else theseChips = [
                                 {
-                                    name: activeChip.name,
-                                    color: activeChip.color,
+                                    name: chip.name,
+                                    color: chip.color,
                                     id: localData.toLowerCase().split(' ').join('-')
                                 }
                             ];
