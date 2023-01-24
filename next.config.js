@@ -80,7 +80,7 @@ const nextConfig = {
       },
       {
         source: '/prospectus',
-        destination: 'https://hackbackbetter.live/f5f786d9-9845-4a82-a061-279a8e69d517/79a15fc1-7155-41b3-90dc-924027a864d8/HackBackBetter_Sponsor_Prospectus.pdf',
+        destination: 'https://cdn.hackbackbetter.live/prospectus.pdf',
         basePath: false,
         permanent: false
       },
