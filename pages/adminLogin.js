@@ -67,7 +67,7 @@ export default function Admin() {
 					<input
 						type="text"
 						placeholder="Your auth token here..."
-						onChange={(e) => setToken(e.target.value)}
+						onChange={e => setToken(e.target.value)}
 					/>
 				</label>
 				<br />
