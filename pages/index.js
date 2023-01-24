@@ -125,7 +125,7 @@ export default function Home() {
 						overflow: 'hidden'
 					}}>
 						<h1 className={styles.title}>
-							HackBackBetter
+							HackBackBetter 2023
 						</h1>
 						<video
 							autoPlay
