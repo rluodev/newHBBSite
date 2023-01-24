@@ -116,6 +116,7 @@ export default function Home() {
 					<meta key="og_img" property="og:image" content={social_image} />
 					<meta key="tw_card" name="twitter:card" content="summary_large_image" />
 					<meta key="tw_img" name="twitter:image" content={social_image} />
+					<meta key="robots" name="robots" content="nofollow" />
 				</Head>
 
 				<main className={styles.main}>

@@ -50,25 +50,4 @@ export default async function (req, res) {
         return res.status(422).json({ message: "We had trouble sending you an email. Please report this error." });
     }
     return res.status(200).send("OK");
-
-    const response = await fetch('https://api.airtable.com/v0/appYlvRWZObGXXGOh/Emails', {
-        method: 'POST',
-        headers: {
-            Authorization: `Bearer ${process.env.AIRTABLE_KEY}`,
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            records: [
-                {
-                    fields: {
-                        Email: email,
-                        City: city
-                    }
-                }
-            ]
-        })
-    });
-    const data = await response.json();
-    console.log(data);
-    res.send('OK');
 }
