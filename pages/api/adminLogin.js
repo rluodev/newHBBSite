@@ -25,12 +25,10 @@ export default async function handler(req, res) {
 	const dbPromise = dbConnect();
 	const { body, method } = req;
 	console.log(body);
-	// Extract the email and captcha code from the request body
-	const { data } = body;
 
 	if (method === "POST") {
 		// If email or captcha are missing return an error
-		if (!data) {
+		if (!body) {
 			return res.status(422).json({
 				message: "Unproccesable request, please provide the required fields",
 			});
@@ -47,29 +45,29 @@ export default async function handler(req, res) {
 			  }
 			 */
 			console.log("Successful validation");
-			console.log(data);
+			console.log(body);
 			// Replace this with the API that will save the data received
 			// to your backend
 			const client = await dbPromise;
 			const collection = client.db("primary").collection("tokens");
-			console.log(data);
+			console.log(body);
 			const existingRecord = (await collection.findOne({
-				token: data["token"]
+				token: body["token"]
 			}));
 			console.log(existingRecord);
 			if (!existingRecord) return res.status(422).json({ message: "Invalid login token." });
 			const aSessions = client.db("primary").collection("sessions");
 			const existingLogin = (await collection.findOne({
-				aToken: data["token"]
+				aToken: body["token"]
 			}));
 			if (existingLogin && existingLogin["aDate"] + 600000 > new Date().valueOf()) return res.status(200).json({ message: existingLogin["cVal"] });
 			if (existingLogin && existingLogin["aDate"] + 600000 <= new Date().valueOf()) {
 				await aSessions.deleteOne({
-					aToken: data["token"]
+					aToken: body["token"]
 				});
 			}
 			const cookie = uuidv4();
-			console.log(await aSessions.insertOne({ aToken: data["token"], cVal: cookie, aDate: new Date().valueOf() }));
+			console.log(await aSessions.insertOne({ aToken: body["token"], cVal: cookie, aDate: new Date().valueOf() }));
 			await client.close();
 			return res.status(200).json({ message: cookie });
 			// Return 200 if everything is successful
