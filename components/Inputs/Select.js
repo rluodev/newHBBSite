@@ -78,7 +78,7 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                 let index = 0;
                 presetChips.forEach((c, i) => (c.name == chip.name ? index = i : 0));
                 let thesePresetChips = JSON.parse(JSON.stringify(presetChips));
-                let theseChips = presetChips;
+                let theseChips = chips;
                 let thisChip = thesePresetChips.splice(index, 1)[0];
                 theseChips.push({
                     name: thisChip.name,
