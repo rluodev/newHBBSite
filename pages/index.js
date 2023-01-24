@@ -227,7 +227,6 @@ export default function Home() {
 													cursor: 'default'
 												} : {})
 											}} onClick={handleFormEnter} disabled={loading}>
-												→
 											</button>
 										</div>
 									</div>
