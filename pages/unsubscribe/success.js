@@ -6,10 +6,10 @@ function sendEmail () {
 }
 
 export default function Success () {
-    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
 
     useEffect(() => {
-        setName(new URLSearchParams(window.location.search).get('email'));
+        setEmail(new URLSearchParams(window.location.search).get('email'));
     }, []);
     return (
         <>
