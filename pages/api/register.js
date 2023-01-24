@@ -24,6 +24,13 @@ export function dbConnect() {
 
 async function email(email, name, uuid) {
 	const token = `Bearer ${process.env.MAIL_KEY}`;
+	console.log(JSON.stringify({
+		data: {
+			firstName: name.split(' ')[0],
+			uuid: uuid,
+			email
+		}
+	}));
 	const res = await fetch('https://api.hackbackbetter.live/mail/v1/authed/deliver/register', {
 		method: 'POST',
 		headers: {
