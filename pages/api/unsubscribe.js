@@ -66,14 +66,6 @@ export default async function handler(req, res) {
 				console.log(1);
 				const collection = client.db("primary").collection("subscriptions");
 				console.log(2);
-				const existingRecord = (await collection.findOne({
-					Email: data["Email"]
-				}));
-				console.log(3);
-				res = "";
-				const res1 = "";
-				if (!existingRecord) return res.status(422).json({ message: "This email is not subscribed." });
-				console.log(4);
 				console.log(data);
 				console.log(5);
 				const query = { Email: data["Email"] };
@@ -82,9 +74,11 @@ export default async function handler(req, res) {
 				console.log(7);
 				await client.close();
 				console.log(8);
-				return res.status(200).send("OK");
+				if (res.deletedCount === 1) {
+					return res.status(200).send("OK");
+				}
 				// Return 200 if everything is successful
-				
+				return res.status(422).json({ message: "The email was not in the database."});
 			}
 
 			return res.status(422).json({

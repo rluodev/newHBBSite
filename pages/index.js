@@ -42,8 +42,12 @@ export default function Home() {
 					} else {
 						// Else throw an error with the message returned
 						// from the API
-						const error = await response.json();
-						throw new Error(error.message)
+						try {
+							const error = await response.json();
+							throw new Error(error.message)
+						} catch (error) {
+							alert(error?.message || "Something went wrong");
+						}
 					}
 				});
 			})
