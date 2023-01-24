@@ -95,6 +95,12 @@ const nextConfig = {
         destination: 'mailto:info@hackbackbetter.live',
         basePath: false,
         permanent: false
+      },
+      {
+        source: '/f5f786d9-9845-4a82-a061-279a8e69d517/79a15fc1-7155-41b3-90dc-924027a864d8/HackBackBetter_Sponsor_Prospectus.pdf',
+        destination: 'https://hackbackbetter.live/prospectus',
+        basePath: false,
+        permanent: false
       }
     ]
   }
