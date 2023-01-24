@@ -19,7 +19,13 @@ export function dbConnect() {
 	});
 }
 
-async function email(email, name) {
+async function uuidv4() {
+	return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+	  (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+	);
+  }
+
+async function email(email, name, uuid) {
 	const token = `Bearer ${process.env.MAIL_KEY}`;
 	const res = await fetch('https://api.hackbackbetter.live/mail/v1/authed/deliver/register', {
 		method: 'POST',
@@ -30,6 +36,7 @@ async function email(email, name) {
 		body: JSON.stringify({
 			data: {
 				firstName: name.split(' ')[0],
+				uuid: uuid,
 				email
 			}
 		})
@@ -88,13 +95,13 @@ export default async function handler(req, res) {
 				}));
 				if (existingRecord) return res.status(422).json({ message: "This email has already registered for HackBackBetter." });
 				console.log(data);
+				data["uuid"] = uuidv4();
 				console.log(await collection.insertOne(data));
 				client.close();
 				// Return 200 if everything is successful
 				try {
-					await email(data["Email"], data["Full Name"]);
+					await email(data["Email"], data["Full Name"], data["uuid"]);
 				} catch (err) {
-
 					return res.status(422).json({ message: "We had trouble sending you an email. Please report this error." });
 				}
 				return res.status(200).send("OK");
