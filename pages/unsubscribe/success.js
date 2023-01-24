@@ -40,7 +40,7 @@ export default function Success () {
             }}>
                 <img src="https://cdn.hackbackbetter.live/logo-full-light.png" style={{ maxWidth: '30%', position: 'absolute', bottom: '2rem', right: '2rem' }} />
                 <h1 style={{ marginBottom: '0px' }}>Successfully unsubscribed.</h1>
-                <p>We're sad to see you go, but we've removed {email ? `, ${email}` : ''} from our email list. If you had any feedback for us, we'll take a look and try to make our experience better!</p>
+                <p>We're sad to see you go, but we've removed {email ? `${email}`:''} from our email list. If you had any feedback for us, we'll take a look and try to make our experience better!</p>
             </div>
             </Modal>
         </div>
