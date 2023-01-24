@@ -210,9 +210,27 @@ export default function Select (props) {
                             let index = 0;
                             chips.forEach((c, i) => (c.id == chip.id ? index = i : 0));
                             let theseChips = JSON.parse(JSON.stringify(chips));
+							if (!displayedPresetChips.length && !custom) return;
                             theseChips.splice(index, 1);
-							startEdits();
+                            if (multiSelect) theseChips.push({
+                                name: activeChip.name,
+                                color: activeChip.color,
+                                id: localData.toLowerCase().split(' ').join('-')
+                            });
+							else theseChips = [
+                                {
+                                    name: activeChip.name,
+                                    color: activeChip.color,
+                                    id: localData.toLowerCase().split(' ').join('-')
+                                }
+                            ];
+							setActiveColor(Math.random() * 6 | 0);
                             setChips(theseChips);
+                            e.target.value = '';
+                            setLocalData('');
+                            startEdits();
+                            resetSelected();
+                            if (setData instanceof Function) setData('');
                         }}>×</span></span>
                     ))}
                     <input placeholder={chips?.length == 0 ? (placeholder ?? 'Select') : ''} onChange={e => {
