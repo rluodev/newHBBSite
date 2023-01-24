@@ -349,10 +349,10 @@ export default function Home() {
 						Nonprofit EIN: 81-2908499.
 					</div>
 					<div style={{ marginTop: '10px', marginBottom: '-8px' }}>
-						<a href="https://instagram.com/" data-splitbee-event="Instagram Click" data-splitbee-event-location="footer">
+						<a href="https://instagram.com/hackbackbetter2023" data-splitbee-event="Instagram Click" data-splitbee-event-location="footer">
 							<Icon glyph='instagram' size={32} />
 						</a>
-						<a href="https://github.com" data-splitbee-event="GitHub Click" data-splitbee-event-location="footer">
+						<a href="https://github.com" data-splitbee-event="GitHub Click" data-splitbee-event-location="footer" disabled="disabled">
 							<Icon glyph='github' size={32} />
 						</a>
 						<a href="https://bank.hackclub.com/hackbackbetter" data-splitbee-event="Finances Click" data-splitbee-event-location="footer">
@@ -361,7 +361,7 @@ export default function Home() {
 						<a href="mailto:info@hackbackbetter.live" data-splitbee-event="Email Click" data-splitbee-event-location="footer">
 							<Icon glyph='email' size={32} />
 						</a>
-						<a href="https://twitter.com" data-splitbee-event="Twitter Click" data-splitbee-event-location="footer">
+						<a href="https://twitter.com" data-splitbee-event="Twitter Click" data-splitbee-event-location="footer" disabled="disabled">
 							<Icon glyph='twitter' size={32} />
 						</a>
 					</div>
