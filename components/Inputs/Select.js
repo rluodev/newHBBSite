@@ -69,8 +69,6 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                 });
                 setChips(theseChips);
                 setActiveColor(Math.random() * 6 | 0);
-				forceUpdate();
-                startEdits();
                 setLocalData('');
                 forceUpdate();
                 startEdits();
@@ -82,26 +80,18 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                 let thesePresetChips = JSON.parse(JSON.stringify(presetChips));
                 let theseChips = chips;
                 let thisChip = thesePresetChips.splice(index, 1)[0];
-				/*if (multiSelect) {
-					console.log(theseChips);*/
-				theseChips.push({
-					name: thisChip.name,
-					color: thisChip.color,
-					id: Math.floor(Math.random() * 10000) + '-' + Date.now()
-				});
-				console.log(theseChips);
-				console.log(theseChips.toString());
-				//}
-                /*else {
-					theseChips = [];
-					theseChips.push(
-						{
-							name: thisChip.name,
-							color: thisChip.color,
-							id: Math.floor(Math.random() * 10000) + '-' + Date.now()
-						}
-					);
-				}*/
+                if (multiSelect) theseChips.push({
+                    name: thisChip.name,
+                    color: thisChip.color,
+                    id: Math.floor(Math.random() * 10000) + '-' + Date.now()
+                });
+                else theseChips = [
+                    {
+                        name: thisChip.name,
+                        color: thisChip.color,
+                        id: Math.floor(Math.random() * 10000) + '-' + Date.now()
+                    }
+                ];
                 setChips(theseChips);
                 forceUpdate();
                 startEdits();
