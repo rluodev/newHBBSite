@@ -79,7 +79,7 @@ export default function Unsubscribe() {
 		try {
 			const response = await fetch("/api/cancelReg", {
 				method: "POST",
-				body: JSON.stringify({ data: {uuid: new URLSearchParams(window.location.search).get('uuid')}, captcha: captchaCode }),
+				body: JSON.stringify({ data: {uuid: new URLSearchParams(window.location.search).get('regID')}, captcha: captchaCode }),
 				headers: {
 					"Content-Type": "application/json",
 				},
