@@ -77,6 +77,7 @@ export default function Register() {
 			return;
 		}
 		try {
+			alert(formData);
 			const response = await fetch("/api/register", {
 				method: "POST",
 				body: JSON.stringify({ data: formData, captcha: captchaCode }),
