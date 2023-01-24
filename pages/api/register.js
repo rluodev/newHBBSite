@@ -1,4 +1,5 @@
 import fetch from "node-fetch";
+import crypto from "crypto";
 
 const sleep = () => new Promise((resolve) => {
 	setTimeout(() => {
