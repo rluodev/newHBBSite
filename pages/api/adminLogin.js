@@ -24,7 +24,7 @@ export function dbConnect() {
 export default async function handler(req, res) {
 	const dbPromise = dbConnect();
 	const { body, method } = req;
-
+	console.log(body);
 	// Extract the email and captcha code from the request body
 	const { data } = body;
 
