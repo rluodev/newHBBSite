@@ -72,7 +72,6 @@ export default function Admin() {
 				<br />
 				<button type="submit" onSubmit={handleSubmita}>Log in</button>
 			</form>
-			{error && <p>Error: {error}</p>}
 		</>
 	);
 	//update
