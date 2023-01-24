@@ -5,7 +5,7 @@ import Modal from '../components/Modal'
 import Text from '../components/Inputs/Text.js';
 import Title from '../components/Inputs/Title.js';
 import Select from '../components/Inputs/Select.js';
-import { questions, sections } from '../lib/questions.js';
+import { questions, sections } from '../lib/unsubquestions.js';
 import { createRef, useEffect, useState } from 'react';
 
 const meta_desc = "An in-person hackathon in San Jose, CA. Join us for 2 days of fun, hacking, and more fun!";
@@ -20,7 +20,7 @@ const timelapseId = "9x00RCb1N7WTpAl6cIN0000Kult00vyzslROW6A1RblWwxM"
 
 // const timelapseId = "402YMZJfp6kW02302E3r1RMe013Ub9AqlPwzr4VjD00HO7ME"
 
-export default function Register() {
+export default function Unsubscribe() {
 
 	const [modal, setModal] = useState(false);
 	const recaptchaRef = createRef();
@@ -77,7 +77,7 @@ export default function Register() {
 			return;
 		}
 		try {
-			const response = await fetch("/api/register", {
+			const response = await fetch("/api/unsubscribe", {
 				method: "POST",
 				body: JSON.stringify({ data: formData, captcha: captchaCode }),
 				headers: {
@@ -86,7 +86,7 @@ export default function Register() {
 			});
 			if (response.ok) {
 				// If the response is ok than show the success alert
-				window.location.href = '/registration/success?name=' + encodeURIComponent(formData['Full Name']);
+				window.location.href = '/unsubscribe/success?email=' + encodeURIComponent(formData['email']);
 			} else {
 				// Else throw an error with the message returned
 				// from the API
@@ -96,8 +96,7 @@ export default function Register() {
 		} catch (error) {
 			alert(error?.message || "Something went wrong");
 		} finally {
-			// Reset the reCAPTCHA when the request has failed or succeeeded
-			// so that it can be executed again if user submits another email.
+
 		}
 	};
 
@@ -148,7 +147,7 @@ export default function Register() {
 	return (
 		<>
 			<Head>
-				<title>Register for HackBackBetter 2023!</title>
+				<title>Unsubscribe</title>
 				<meta name="description" content={meta_desc} />
 				<link rel="icon" href="/favicon.ico" />
 				<meta key="og_locale" property="og:locale" content="en_US" />
@@ -175,7 +174,7 @@ export default function Register() {
 				<main className={styles.main}>
 					<h1 className={styles.title} style={{ color: 'black' }}>
 						HackBackBetter 2023
-						<span style={{ marginLeft: '-6px' }}>{' '}Registration</span>
+						<span style={{ marginLeft: '-6px' }}>{' '}Unsubscribe</span>
 					</h1>
 					<form onSubmit={e => e.preventDefault()}>
 						{sections.map((section, i) => {
@@ -184,94 +183,74 @@ export default function Register() {
 									padding: '1rem',
 									position: 'relative'
 								}}>
-									<div style={{
-										width: '100%',
-										height: '100%',
-										position: 'absolute',
-										filter: 'opacity(0.6)',
-										top: '0px',
-										left: '0px',
-										zIndex: '10',
-										// CHANGE THE BELOW!!!
-										background: i % 4 === 1 ? 'url("https://cdn.hackbackbetter.live/backgroundimg.jpg")' : undefined,
-										backgroundSize: 'cover',
-
-									}}></div>
-									<div style={{
-										position: 'relative',
-										zIndex: '20',
-									}}>
-
-
-										<center>
-											<div style={{
-												width: '500px',
-												maxWidth: 'calc(100vw - 60px)',
-												textAlign: 'left',
-												marginLeft: '20px',
-												marginTop: i == 0 ? '6rem' : '2rem'
-											}}>
-												<h2>{section.title}</h2>
-												<p>{section.description}</p>
-											</div>
-										</center>
-										<center>
-											<div style={{
-												width: '500px',
-												maxWidth: 'calc(100vw - 60px)',
-												textAlign: 'left',
-												marginLeft: '20px',
-												marginTop: i == 0 ? '6rem' : '2rem'
-											}}>
-												{
-													section.questions.map((question, i) => {
-														return (
-															<>
-																<div style={{
-																	marginBottom: '3rem',
-																	marginTop: '3rem',
-																}}>
-																	{(question.special == 'multiSelect' || question.special == 'select') ?
-																		<Select {...{
-																			setValue,
-																			options: question.options,
-																			multi: question.special == 'multiSelect',
+									<center>
+										<div style={{
+											width: '500px',
+											maxWidth: 'calc(100vw - 60px)',
+											textAlign: 'left',
+											marginLeft: '20px',
+											marginTop: i == 0 ? '6rem' : '2rem'
+										}}>
+											<h2>{section.title}</h2>
+											<p>{section.description}</p>
+										</div>
+									</center>
+									<center>
+										<div style={{
+											width: '500px',
+											maxWidth: 'calc(100vw - 60px)',
+											textAlign: 'left',
+											marginLeft: '20px',
+											marginTop: i == 0 ? '6rem' : '2rem'
+										}}>
+											{
+												section.questions.map((question, i) => {
+													return (
+														<>
+															<div style={{
+																marginBottom: '3rem',
+																marginTop: '3rem',
+															}}>
+																{(question.special == 'multiSelect' || question.special == 'select') ?
+																	<Select {...{
+																		setValue,
+																		options: question.options,
+																		multi: question.special == 'multiSelect',
+																		name: question.name,
+																		description: question.description,
+																		help: question.help,
+																		width: 'min(calc(100% - 20px), 400px)',
+																		type: question.type,
+																		placeholder: question.placeholder,
+																		validate: question.verify,
+																		required: question.required,
+																		dontDisplayAll: question.dontDisplayAll
+																	}} />
+																	: question.special == 'text' ? <Title {...{
+																		name: question.name,
+																		description: question.description,
+																		help: question.help,
+																		width: 'min(calc(100% - 20px), 400px)',
+																	}} /> :
+																		<Text {...{
 																			name: question.name,
+																			setValue,
 																			description: question.description,
 																			help: question.help,
 																			width: 'min(calc(100% - 20px), 400px)',
 																			type: question.type,
 																			placeholder: question.placeholder,
 																			validate: question.verify,
-																			required: question.required,
-																			dontDisplayAll: question.dontDisplayAll
+																			required: question.required
 																		}} />
-																		: question.special == 'text' ? <Title {...{
-																			name: question.name,
-																			description: question.description,
-																			help: question.help,
-																			width: 'min(calc(100% - 20px), 400px)',
-																		}} /> :
-																			<Text {...{
-																				name: question.name,
-																				setValue,
-																				description: question.description,
-																				help: question.help,
-																				width: 'min(calc(100% - 20px), 400px)',
-																				type: question.type,
-																				placeholder: question.placeholder,
-																				validate: question.verify,
-																				required: question.required
-																			}} />
-																	}
-																</div>
-															</>
-														)
-													})
-												}
-											</div>
-										</center>
-									</div>
+																}
+															</div>
+														</>
+													)
+												})
+											}
+										</div>
+									</center>
 								</div>
 							);
 						})}
@@ -311,7 +290,7 @@ export default function Register() {
 									padding: '0.5rem',
 									cursor: valid.valid ? 'pointer' : 'default'
 								}} onClick={valid.valid ? handleSubmit : () => {
-								}} aria-label="a" className="tooltipped" disabled={!valid.valid}>{valid.valid ? 'Register' : `${valid.missing.length} incomplete field${valid.missing.length == 1 ? '' : 's'}`}</button>
+								}} aria-label="a" className="tooltipped" disabled={!valid.valid}>{valid.valid ? 'Unsubscribe' : `${valid.missing.length} incomplete field${valid.missing.length == 1 ? '' : 's'}`}</button>
 							</div>
 						</center>
 					</form>
