@@ -70,6 +70,8 @@ export default async function handler(req, res) {
 					Email: data["Email"]
 				}));
 				console.log(3);
+				res = "";
+				const res1 = "";
 				if (!existingRecord) return res.status(422).json({ message: "This email is not subscribed." });
 				console.log(4);
 				console.log(data);
