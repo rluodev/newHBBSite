@@ -69,6 +69,8 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                 });
                 setChips(theseChips);
                 setActiveColor(Math.random() * 6 | 0);
+				forceUpdate();
+                startEdits();
                 setLocalData('');
                 forceUpdate();
                 startEdits();
@@ -93,10 +95,9 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                     }
                 ];
                 setChips(theseChips);
-				setLocalData('');
                 forceUpdate();
                 startEdits();
-                
+                setLocalData('');
             }
         }}>
             {isCustom && 'Add '} <span data-color={chip.color} className={styles.chip} key={Math.floor(Math.random() * 10000) + '-' + Date.now()}>{chip.name} <span className={styles.close}>×</span></span>
@@ -210,27 +211,8 @@ export default function Select (props) {
                             let index = 0;
                             chips.forEach((c, i) => (c.id == chip.id ? index = i : 0));
                             let theseChips = JSON.parse(JSON.stringify(chips));
-							if (!displayedPresetChips.length && !custom) return;
                             theseChips.splice(index, 1);
-                            if (multiSelect) theseChips.push({
-                                name: chip.name,
-                                color: chip.color,
-                                id: localData.toLowerCase().split(' ').join('-')
-                            });
-							else theseChips = [
-                                {
-                                    name: chip.name,
-                                    color: chip.color,
-                                    id: localData.toLowerCase().split(' ').join('-')
-                                }
-                            ];
-							setActiveColor(Math.random() * 6 | 0);
                             setChips(theseChips);
-                            e.target.value = '';
-                            setLocalData('');
-                            startEdits();
-                            resetSelected();
-                            if (setData instanceof Function) setData('');
                         }}>×</span></span>
                     ))}
                     <input placeholder={chips?.length == 0 ? (placeholder ?? 'Select') : ''} onChange={e => {
