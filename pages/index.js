@@ -132,7 +132,7 @@ export default function Home() {
 								right: 0,
 								height: 'auto!important',
 								width: '100% !important',
-								minHeight: '600px',
+								minHeight: '1580px',
 								objectFit: 'cover',
 								zIndex: -1
 							}}
