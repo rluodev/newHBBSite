@@ -41,7 +41,8 @@ export default function Home() {
 						'Content-Type': 'application/json'
 					},
 					body: JSON.stringify({
-						email
+						email,
+						city: geo.city
 					})
 				}).then(async (response) => {
 					if (response.ok) {
