@@ -263,11 +263,9 @@ export default function Home() {
 				<div className={styles.sponsors} style={{
 					overflowY: 'scroll'
 				}}>
-					<a href="/register" disabled={"false"} target="_blank" onClick={e => e.preventDefault()}>
+					<a href="/register" target="_blank" onClick={e => e.preventDefault()}>
 						<button className={styles.altButton} style={{
-							background: 'rgba(var(--purple-3-values), 0.3)',
-							cursor: 'default',
-							transform: 'translate(0px, 0px)'
+							background: 'rgba(var(--purple-3-values), 0.3)'
 						}}>Register here!</button>
 					</a>
 					<button className={styles.altButton} onClick={() => {
