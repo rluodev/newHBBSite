@@ -71,11 +71,12 @@ export default async function handler(req, res) {
 				}));
 				console.log(existingRecord);
 				if (!existingRecord) return res.status(422).json({ message: "The registration you are attempting to cancel does not exist." });
+				const n = existingRecord["Full Name"].split(' ');
 				const response = await collection.deleteOne(existingRecord);
 				await client.close();
 				console.log(response.deletedCount);
 				if (response.deletedCount === 1) {
-					return res.status(200).send("OK");
+					return res.status(200).json({ name: n });
 				}
 				// Return 200 if everything is successful
 				return res.status(422).json({ message: "Something went wrong."});
