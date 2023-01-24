@@ -63,22 +63,21 @@ export default async function handler(req, res) {
 				// Replace this with the API that will save the data received
 				// to your backend
 				const client = await dbPromise;
-				console.log(1);
 				const collection = client.db("primary").collection("subscriptions");
-				console.log(2);
 				console.log(data);
-				console.log(5);
-				const query = { Email: data["Email"] };
-				console.log(6);
-				const response = await collection.deleteOne(query);
-				console.log(7);
+				const existingRecord = (await collection.findOne({
+					Email: data["Email"]
+				}));
+				console.log(existingRecord);
+				if (!existingRecord) return res.status(422).json({ message: "This email is not currently subscribed." });
+				const response = await collection.deleteOne(existingRecord);
 				await client.close();
-				console.log(8);
+				console.log(response.deletedCount);
 				if (response.deletedCount === 1) {
 					return res.status(200).send("OK");
 				}
 				// Return 200 if everything is successful
-				return res.status(422).json({ message: "The email was not in the database."});
+				return res.status(422).json({ message: "Something went wrong."});
 			}
 
 			return res.status(422).json({
