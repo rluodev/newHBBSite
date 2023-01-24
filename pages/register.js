@@ -130,7 +130,7 @@ export default function Register() {
 						height: '100%',
 						border: 'none',
 						borderRadius: '8px',
-						border: '2px solid var(--orange)',
+						border: '2px solid var(--purple)',
 						display: 'flex',
 						alignItems: 'center',
 						flexDirection: 'column',
