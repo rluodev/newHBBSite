@@ -70,11 +70,11 @@ export default async function handler(req, res) {
 				console.log(5);
 				const query = { Email: data["Email"] };
 				console.log(6);
-				const res = await collection.deleteOne(query);
+				const response = await collection.deleteOne(query);
 				console.log(7);
 				await client.close();
 				console.log(8);
-				if (res.deletedCount === 1) {
+				if (response.deletedCount === 1) {
 					return res.status(200).send("OK");
 				}
 				// Return 200 if everything is successful
