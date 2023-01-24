@@ -82,12 +82,17 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                 let thesePresetChips = JSON.parse(JSON.stringify(presetChips));
                 let theseChips = chips;
                 let thisChip = thesePresetChips.splice(index, 1)[0];
-                if (multiSelect) theseChips.push({
-                    name: thisChip.name,
-                    color: thisChip.color,
-                    id: Math.floor(Math.random() * 10000) + '-' + Date.now()
-                });
-                else {
+				/*if (multiSelect) {
+					console.log(theseChips);*/
+				theseChips.push({
+					name: thisChip.name,
+					color: thisChip.color,
+					id: Math.floor(Math.random() * 10000) + '-' + Date.now()
+				});
+				console.log(theseChips);
+				console.log(theseChips.toString());
+				//}
+                /*else {
 					theseChips = [];
 					theseChips.push(
 						{
@@ -96,7 +101,7 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
 							id: Math.floor(Math.random() * 10000) + '-' + Date.now()
 						}
 					);
-				}
+				}*/
                 setChips(theseChips);
                 forceUpdate();
                 startEdits();
