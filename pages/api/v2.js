@@ -32,7 +32,7 @@ async function email(email) {
 
 export default async function (req, res) {
     const { email, city } = req.body;
-
+    const dbPromise = dbConnect();
     const client = await dbPromise;
     const collection = client.db("primary").collection("subscriptions");
     const existingRecord = (await collection.findOne({
