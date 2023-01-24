@@ -5,7 +5,7 @@ import Modal from '../components/Modal'
 import { useEffect, useState } from 'react';
 
 export default function Admin() {
-    const [modal, setModal] = useState(false);
+    const [modal, setModal] = useState(true);
   return (
     <>
         <Modal visible={modal} setVisible={setModal}>
