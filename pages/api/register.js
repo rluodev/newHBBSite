@@ -1,5 +1,7 @@
 import fetch from "node-fetch";
 import crypto from "crypto";
+import {v4 as uuidv4} from "uuid";
+
 
 const sleep = () => new Promise((resolve) => {
 	setTimeout(() => {
@@ -19,12 +21,6 @@ export function dbConnect() {
 		});
 	});
 }
-
-async function uuidv4() {
-	return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
-	  (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
-	);
-  }
 
 async function email(email, name, uuid) {
 	const token = `Bearer ${process.env.MAIL_KEY}`;
@@ -94,7 +90,7 @@ export default async function handler(req, res) {
 				}));
 				if (existingRecord) return res.status(422).json({ message: "This email has already registered for HackBackBetter." });
 				console.log(data);
-				data["uuid"] = uuidv4().toString();
+				data["uuid"] = uuidv4();
 				console.log(data["uuid"]);
 				console.log(await collection.insertOne(data));
 				client.close();
