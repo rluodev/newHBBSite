@@ -39,13 +39,14 @@ export default async function (req, res) {
         Email: email
     }));
     if (existingRecord) return res.status(422).json({ message: "This email is already subscribed." });
-    console.log("New subscription: " + email + "in" + city);
+    console.log("New subscription: " + email + " in " + city);
     console.log(await collection.insertOne({Email: email, City: city}));
     client.close();
     // Return 200 if everything is successful
     try {
         await email(email);
     } catch (err) {
+        console.log("Email being weird wtf?");
         return res.status(422).json({ message: "We had trouble sending you an email. Please report this error." });
     }
     return res.status(200).send("OK");

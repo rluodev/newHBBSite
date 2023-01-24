@@ -59,18 +59,27 @@ export default async function handler(req, res) {
 			  }
 			 */
 			if (captchaValidation.success) {
+				console.log("Successful validation");
 				// Replace this with the API that will save the data received
 				// to your backend
 				const client = await dbPromise;
+				console.log(1);
 				const collection = client.db("primary").collection("subscriptions");
+				console.log(2);
 				const existingRecord = (await collection.findOne({
 					Email: data["Email"]
 				}));
+				console.log(3);
 				if (!existingRecord) return res.status(422).json({ message: "This email is not subscribed." });
+				console.log(4);
 				console.log(data);
+				console.log(5);
 				const query = { Email: data["Email"] };
+				console.log(6);
 				const res = await collection.deleteOne(query);
+				console.log(7);
 				await client.close();
+				console.log(8);
 				return res.status(200).send("OK");
 				// Return 200 if everything is successful
 				

@@ -35,8 +35,16 @@ export default function Home() {
 						email,
 						city: geo.city
 					})
-				}).then(() => {
-					setSubmitted(true);
+				}).then(async (response) => {
+					if (response.ok) {
+						// If the response is ok than show the success alert
+						setSubmitted(true);
+					} else {
+						// Else throw an error with the message returned
+						// from the API
+						const error = await response.json();
+						throw new Error(error.message)
+					}
 				});
 			})
 		}
