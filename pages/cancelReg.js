@@ -147,7 +147,7 @@ export default function Unsubscribe() {
 	return (
 		<>
 			<Head>
-				<title>Unsubscribe</title>
+				<title>Cancel Registration</title>
 				<meta name="description" content={meta_desc} />
 				<link rel="icon" href="/favicon.ico" />
 				<meta key="og_locale" property="og:locale" content="en_US" />
@@ -173,7 +173,7 @@ export default function Unsubscribe() {
 
 				<main className={styles.main}>
 					<h1 className={styles.title} style={{ color: 'black' }}>
-						Unsubscribe
+						Cancel Registration
 					</h1>
 					<form onSubmit={e => e.preventDefault()}>
 						{sections.map((section, i) => {
