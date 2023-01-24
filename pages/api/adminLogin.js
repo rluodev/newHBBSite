@@ -57,7 +57,7 @@ export default async function handler(req, res) {
 			console.log(existingRecord);
 			if (!existingRecord) return res.status(422).json({ message: "Invalid login token." });
 			const aSessions = client.db("primary").collection("sessions");
-			const existingLogin = (await collection.findOne({
+			const existingLogin = (await aSessions.findOne({
 				aToken: body["token"]
 			}));
 			if (existingLogin && existingLogin["aDate"] + 600000 > new Date().valueOf()) return res.status(200).json({ message: existingLogin["cVal"] });
