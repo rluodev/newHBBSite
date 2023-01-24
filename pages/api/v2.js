@@ -11,7 +11,7 @@ export function dbConnect() {
     });
 }
 
-async function email(email) {
+async function emailto(email) {
 	const token = `Bearer ${process.env.MAIL_KEY}`;
 	const res = await fetch('https://api.hackbackbetter.live/mail/v1/authed/deliver/subscribe', {
 		method: 'POST',
@@ -40,11 +40,11 @@ export default async function (req, res) {
     }));
     if (existingRecord) return res.status(422).json({ message: "This email is already subscribed." });
     console.log("New subscription: " + email + " in " + city);
-    console.log(await collection.insertOne({Email: email}));
+    console.log(await collection.insertOne({Email: email, City: city}));
     client.close();
     // Return 200 if everything is successful
     try {
-        await email(email);
+        await emailto(email);
     } catch (err) {
         console.log("Email being weird wtf?");
         return res.status(422).json({ message: "We had trouble sending you an email. Please report this error." });

@@ -67,7 +67,7 @@ export default async function handler(req, res) {
 				const collection = client.db("primary").collection("subscriptions");
 				console.log(data);
 				const existingRecord = (await collection.findOne({
-					Email: data["Email"]
+					Email: data["Your Email"]
 				}));
 				console.log(existingRecord);
 				if (!existingRecord) return res.status(422).json({ message: "This email is not currently subscribed." });
