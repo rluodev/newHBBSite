@@ -86,7 +86,7 @@ export default function Unsubscribe() {
 			});
 			if (response.ok) {
 				// If the response is ok than show the success alert
-				window.location.href = '/unsubscribe/success?email=' + encodeURIComponent(formData['email']);
+				window.location.href = '/unsubscribe/success?email=' + encodeURIComponent(formData['Your Email']);
 			} else {
 				// Else throw an error with the message returned
 				// from the API
@@ -173,8 +173,7 @@ export default function Unsubscribe() {
 
 				<main className={styles.main}>
 					<h1 className={styles.title} style={{ color: 'black' }}>
-						HackBackBetter 2023
-						<span style={{ marginLeft: '-6px' }}>{' '}Unsubscribe</span>
+						Unsubscribe
 					</h1>
 					<form onSubmit={e => e.preventDefault()}>
 						{sections.map((section, i) => {
