@@ -5,9 +5,9 @@ import Modal from '../components/Modal'
 import { useEffect, useState } from 'react';
 
 export default function Admin() {
+	const [token, setToken] = useState('');
 	const handleSubmita = () => {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
-			setLoading(true);
 			fetch('/api/adminLogin', {
 				method: 'POST',
 				headers: {
@@ -65,7 +65,7 @@ export default function Admin() {
 					Auth Token:
 					<input
 						type="text"
-						value={token}
+						placeholder="Your auth token here..."
 						onChange={(e) => setToken(e.target.value)}
 					/>
 				</label>

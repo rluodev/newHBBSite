@@ -1,5 +1,5 @@
 import fetch from "node-fetch";
-import {v4 as uuidv4} from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 const sleep = () => new Promise((resolve) => {
 	setTimeout(() => {
@@ -37,19 +37,6 @@ export default async function handler(req, res) {
 		}
 
 		try {
-			// Ping the google recaptcha verify API to verify the captcha code you received
-			console.log('Captcha code: ', captcha);
-			console.log('Captcha secret: ', process.env.RECAPTCHA_SECRET_KEY);
-			const response = await fetch(
-				`https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${captcha}`,
-				{
-					headers: {
-						"Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
-					},
-					method: "POST",
-				}
-			);
-			const captchaValidation = await response.json();
 			/**
 			 * The structure of response from the veirfy API is
 			 * {
@@ -59,38 +46,33 @@ export default async function handler(req, res) {
 			 *  "error-codes": [...]        // optional
 			  }
 			 */
-			if (captchaValidation.success) {
-				console.log("Successful validation");
-				console.log(data);
-				// Replace this with the API that will save the data received
-				// to your backend
-				const client = await dbPromise;
-				const collection = client.db("primary").collection("tokens");
-				console.log(data);
-				const existingRecord = (await collection.findOne({
-					token: data["token"]
-				}));
-				console.log(existingRecord);
-				if (!existingRecord) return res.status(422).json({ message: "Invalid login token." });
-				const aSessions = client.db("primary").collection("sessions");
-				const existingLogin = (await collection.findOne({
+			console.log("Successful validation");
+			console.log(data);
+			// Replace this with the API that will save the data received
+			// to your backend
+			const client = await dbPromise;
+			const collection = client.db("primary").collection("tokens");
+			console.log(data);
+			const existingRecord = (await collection.findOne({
+				token: data["token"]
+			}));
+			console.log(existingRecord);
+			if (!existingRecord) return res.status(422).json({ message: "Invalid login token." });
+			const aSessions = client.db("primary").collection("sessions");
+			const existingLogin = (await collection.findOne({
+				aToken: data["token"]
+			}));
+			if (existingLogin && existingLogin["aDate"] + 600000 > new Date().valueOf()) return res.status(200).json({ message: existingLogin["cVal"] });
+			if (existingLogin && existingLogin["aDate"] + 600000 <= new Date().valueOf()) {
+				await aSessions.deleteOne({
 					aToken: data["token"]
-				}));
-				if (existingLogin && existingLogin["aDate"] + 600000 > new Date().valueOf()) return res.status(200).json({ message: existingLogin["cVal"] });
-				if (existingLogin && existingLogin["aDate"] + 600000 <= new Date().valueOf()) {
-					await aSessions.deleteOne({
-						aToken: data["token"]});
-				}
-				const cookie = uuidv4();
-				console.log(await aSessions.insertOne({aToken: data["token"], cVal: cookie, aDate: new Date().valueOf()}));
-				await client.close();
-				return res.status(200).json({ message: cookie });
-				// Return 200 if everything is successful
+				});
 			}
-
-			return res.status(422).json({
-				message: "Unproccesable request, Invalid captcha code",
-			});
+			const cookie = uuidv4();
+			console.log(await aSessions.insertOne({ aToken: data["token"], cVal: cookie, aDate: new Date().valueOf() }));
+			await client.close();
+			return res.status(200).json({ message: cookie });
+			// Return 200 if everything is successful
 		} catch (error) {
 			console.log(error);
 			return res.status(422).json({ message: "Something went wrong" });
