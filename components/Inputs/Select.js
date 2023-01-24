@@ -87,13 +87,16 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                     color: thisChip.color,
                     id: Math.floor(Math.random() * 10000) + '-' + Date.now()
                 });
-                else theseChips = [
-                    {
-                        name: thisChip.name,
-                        color: thisChip.color,
-                        id: Math.floor(Math.random() * 10000) + '-' + Date.now()
-                    }
-                ];
+                else {
+					theseChips = [];
+					theseChips.push(
+						{
+							name: thisChip.name,
+							color: thisChip.color,
+							id: Math.floor(Math.random() * 10000) + '-' + Date.now()
+						}
+					);
+				}
                 setChips(theseChips);
                 forceUpdate();
                 startEdits();
