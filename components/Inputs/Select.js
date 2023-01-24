@@ -80,9 +80,6 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                 let thesePresetChips = JSON.parse(JSON.stringify(presetChips));
                 let theseChips = chips;
                 let thisChip = thesePresetChips.splice(index, 1)[0];
-				if (!theseChips) {
-					theseChips = [];
-				}
                 if (multiSelect) theseChips.push({
                     name: thisChip.name,
                     color: thisChip.color,
@@ -96,9 +93,10 @@ export function Chip ({ chipData: chip, forceUpdate, chips, setChips, multiSelec
                     }
                 ];
                 setChips(theseChips);
+				setLocalData('');
                 forceUpdate();
                 startEdits();
-                setLocalData('');
+                
             }
         }}>
             {isCustom && 'Add '} <span data-color={chip.color} className={styles.chip} key={Math.floor(Math.random() * 10000) + '-' + Date.now()}>{chip.name} <span className={styles.close}>×</span></span>
@@ -213,6 +211,7 @@ export default function Select (props) {
                             chips.forEach((c, i) => (c.id == chip.id ? index = i : 0));
                             let theseChips = JSON.parse(JSON.stringify(chips));
                             theseChips.splice(index, 1);
+							startEdits();
                             setChips(theseChips);
                         }}>×</span></span>
                     ))}
