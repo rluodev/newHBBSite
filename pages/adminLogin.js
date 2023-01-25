@@ -88,6 +88,17 @@ export default function Admin() {
 								<input
 									type="password"
 									placeholder="Your auth token here..."
+									style={{
+										marginBottom: '4rem',
+										borderRadius: '0.25rem',
+										borderColor: '#d3d3d4',
+										borderWidth: '2px',
+										borderStyle: 'solid',
+										fontSize: '1em',
+										fontFamily: '\'Anonymous Pro\', monospace',
+										padding: '0.5rem',
+										cursor: 'pointer'
+									}}
 									onChange={e => setToken(e.target.value)}
 								/>
 							</label>
