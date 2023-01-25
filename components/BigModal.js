@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function aModal ({ visible, setVisible, children, hideCloseButton }) {
+export default function BigModal ({ visible, setVisible, children, hideCloseButton }) {
     if (visible) return (
         <>
             <div style={{
@@ -24,8 +24,8 @@ export default function aModal ({ visible, setVisible, children, hideCloseButton
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 zIndex: '1001',
-                width: '800px',
-                height: '700px',
+                width: '1920px',
+                height: '1080px',
                 maxWidth: 'calc(100vw - 40px)',
                 maxHeight: 'calc(100vh - 60px)',
                 background: 'white',
