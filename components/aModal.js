@@ -24,7 +24,7 @@ export default function aModal ({ visible, setVisible, children, hideCloseButton
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 zIndex: '1001',
-                width: '900px',
+                width: '800px',
                 height: '700px',
                 maxWidth: 'calc(100vw - 40px)',
                 maxHeight: 'calc(100vh - 60px)',
