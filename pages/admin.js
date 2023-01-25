@@ -52,16 +52,16 @@ export default function Admin() {
 				background: 'var(--purple)'
 			}}>
 				<Head>
-					<title>Login</title>
-					<meta name="description" content="Login" />
+					<title>Admin Panel</title>
+					<meta name="description" content="Admin Panel" />
 					<link rel="icon" href="/favicon.ico" />
 					<meta key="og_locale" property="og:locale" content="en_US" />
 					<meta key="og_type" property="og:type" content="website" />
 					<meta key="og_site" property="og:site_name" content="HackBackBetter 2023" />
 					<meta key="og_title" property="og:title" content="HackBackBetter 2023" />
-					<meta key="desc" name="description" content="Login" />
-					<meta key="og_desc" property="og:description" content="Login" />
-					<meta key="tw_desc" name="twitter:description" content="Login" />
+					<meta key="desc" name="description" content="Admin Panel" />
+					<meta key="og_desc" property="og:description" content="Admin Panel" />
+					<meta key="tw_desc" name="twitter:description" content="Admin Panel" />
 					<meta key="theme_color" name="theme-color" content="purple" />
 					<meta key="tw_card" name="twitter:card" content="summary_large_image" />
 					<meta key="robots" name="robots" content="noindex, nofollow" />
@@ -82,46 +82,13 @@ export default function Admin() {
 						position: 'relative'
 					}}>
 						<img src="https://cdn.hackbackbetter.live/logo-full-light.png" style={{ maxWidth: '30%', position: 'absolute', bottom: '2rem', right: '2rem' }} />
-						<form>
-							<label>
-								Auth Token:
-								<input
-									type="password"
-									style={{width: '100%',
-										padding: '10px',
-										fontSize: '24px',
-										borderRadius: '8px',
-										backgroundColor: 'var(--purple)',
-										border: 'none',
-										color: 'white',
-										cursor: 'pointer',
-										fontFamily: 'var(--font-stack)',
-										marginBottom: '16px',
-										transition: '0.3s all',
-										outline: 'none',
-										border: '2px solid var(--purple)'
-									}}
-									placeholder="Your auth token here..."
-									onChange={e => setToken(e.target.value)}
-								/>
-							</label>
-							<br />
-							<button type="submit" style={{
-									marginBottom: '4rem',
-									borderRadius: '0.25rem',
-									borderColor: '#d3d3d4',
-									borderWidth: '2px',
-									borderStyle: 'solid',
-									fontSize: '1em',
-									fontFamily: '\'Anonymous Pro\', monospace',
-									padding: '0.5rem',
-									cursor: 'pointer'
-								}}
-								onClick={e => { e.preventDefault(); handleSubmita() }}>Log in</button>
-						</form>
+						<h1 style={{ marginBottom: '0px' }}>You've successfully cancelled your registration.</h1>
+						<p>That's all you need to do. If you don't want to receive any more update emails from us (if you subscribed on our home page), please visit <a href="/unsubscribe" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>this page</a> and fill out the form.</p>
+						<p><b>What made you leave?</b> We would like to hear any feedback that you have for us, so please send us an email at <a href="mailto:info@hackbackbetter.live" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>info@hackbackbetter.live</a> if you have any!</p>
 					</div>
 				</aModal>
 			</div>
+
 		</>
 	);
 	//update
