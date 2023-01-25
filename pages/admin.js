@@ -8,7 +8,7 @@ export default function Admin() {
 	const [showModal, setShowModal] = useState(false);
 	useEffect(() => {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
-			fetch('/api/adminLogin', {
+			fetch('/api/CheckAuth', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
@@ -30,7 +30,7 @@ export default function Admin() {
 	  }, [])
 	const checkAuth = setInterval(function () {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
-			fetch('/api/adminLogin', {
+			fetch('/api/CheckAuth', {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
