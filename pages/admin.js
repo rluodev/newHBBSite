@@ -5,8 +5,8 @@ import BigModal from '../components/BigModal'
 import { useEffect, useState } from 'react';
 
 export default function Admin() {
-	const [token, setToken] = useState('');
-	const handleSubmita = () => {
+	const [showModal, setShowModal] = useState(false);
+	const checkAuth = setInterval(function () {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
 			fetch('/api/adminLogin', {
 				method: 'POST',
@@ -14,36 +14,19 @@ export default function Admin() {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					token,
-					city: geo.city
+					token: localStorage.getItem('token')
 				})
 			}).then(async (response) => {
 				console.log(response);
 				if (response.ok) {
-					const cookie = await response.json();
-					// If the response is ok, set the token in the local storage
-					// and redirect to the dashboard
-					try {
-						localStorage.setItem('token', cookie.message);
-						window.location.href = '/admin';
-					} catch (err) {
-						alert("Failed to set auth token in local storage. Please make sure cookies are enabled.");
-						console.log("Failed to set auth token in local storage. Please make sure cookies are enabled.");
-					}
-
+					setShowModal(true);
 				} else {
-					// Else throw an error with the message returned
-					// from the API
-					try {
-						const error = await response.json();
-						throw new Error(error.message)
-					} catch (error) {
-						alert(error?.message || "Something went wrong");
-					}
+					setShowModal(false);
+					window.location.href = '/adminLogin';
 				}
 			});
 		})
-	}
+	}, 5000);
 	return (
 		<>
 			<div style={{
@@ -66,7 +49,7 @@ export default function Admin() {
 					<meta key="tw_card" name="twitter:card" content="summary_large_image" />
 					<meta key="robots" name="robots" content="noindex, nofollow" />
 				</Head>
-				<BigModal visible={true} setVisible={() => ''} hideCloseButton={true}>
+				<BigModal visible={showModal} setVisible={setShowModal} hideCloseButton={true}>
 					<div style={{
 						width: '100%',
 						height: '100%',
