@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import styles from '../styles/Home.module.css'
 import Modal from '../../components/Modal';
 
 function sendEmail () {
