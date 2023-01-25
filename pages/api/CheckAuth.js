@@ -52,7 +52,7 @@ export default async function handler(req, res) {
 			const collection = client.db("primary").collection("sessions");
 			console.log(body);
 			const existingRecord = (await collection.findOne({
-				aToken: body["token"]
+				cVal: body["token"]
 			}));
 			console.log(existingRecord);
 			if (!existingRecord) {
@@ -60,12 +60,10 @@ export default async function handler(req, res) {
 			}
 			if (existingRecord["aDate"] + 600000 <= new Date().valueOf()) {
 				await collection.deleteOne({
-					aToken: body["token"]
+					cVal: body["token"]
 				});
 				return res.status(422).json({ message: "Logged out due to inactivity." });
 			}
-			const cookie = uuidv4();
-			console.log(await aSessions.insertOne({ aToken: body["token"], cVal: cookie, aDate: new Date().valueOf() }));
 			await client.close();
 			return res.status(200).json({ message: cookie });
 			// Return 200 if everything is successful
