@@ -87,23 +87,37 @@ export default function Admin() {
 								Auth Token:
 								<input
 									type="password"
-									placeholder="Your auth token here..."
-									style={{
-										marginBottom: '4rem',
-										borderRadius: '0.25rem',
-										borderColor: '#d3d3d4',
-										borderWidth: '2px',
-										borderStyle: 'solid',
-										fontSize: '1em',
-										fontFamily: '\'Anonymous Pro\', monospace',
-										padding: '0.5rem',
-										cursor: 'pointer'
+									style={{width: '100%',
+										padding: '10px',
+										fontSize: '24px',
+										borderRadius: '8px',
+										backgroundColor: 'var(--purple)',
+										border: 'none',
+										color: 'white',
+										cursor: 'pointer',
+										fontFamily: 'var(--font-stack)',
+										marginBottom: '16px',
+										transition: '0.3s all',
+										outline: 'none',
+										border: '2px solid var(--purple)'
 									}}
+									placeholder="Your auth token here..."
 									onChange={e => setToken(e.target.value)}
 								/>
 							</label>
 							<br />
-							<button type="submit" onClick={e => { e.preventDefault(); handleSubmita() }}>Log in</button>
+							<button type="submit" style={{
+									marginBottom: '4rem',
+									borderRadius: '0.25rem',
+									borderColor: '#d3d3d4',
+									borderWidth: '2px',
+									borderStyle: 'solid',
+									fontSize: '1em',
+									fontFamily: '\'Anonymous Pro\', monospace',
+									padding: '0.5rem',
+									cursor: 'pointer'
+								}}
+								onClick={e => { e.preventDefault(); handleSubmita() }}>Log in</button>
 						</form>
 					</div>
 				</Modal>
