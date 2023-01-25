@@ -86,7 +86,7 @@ export default function Unsubscribe() {
 			});
 			if (response.ok) {
 				// If the response is ok than show the success alert
-				window.location.href = '/cancelReg/success?name=' + encodeURIComponent(await response.json().name);
+				window.location.href = '/cancelReg/success';
 			} else {
 				// Else throw an error with the message returned
 				// from the API

@@ -6,11 +6,6 @@ function sendEmail () {
 }
 
 export default function Success () {
-    const [name, setName] = useState('');
-
-    useEffect(() => {
-        setName(new URLSearchParams(window.location.search).get('name'));
-    }, []);
     return (
         <>
         <div style={{
@@ -39,8 +34,8 @@ export default function Success () {
                 position: 'relative'
             }}>
                 <img src="https://cdn.hackbackbetter.live/logo-full-light.png" style={{ maxWidth: '30%', position: 'absolute', bottom: '2rem', right: '2rem' }} />
-                <h1 style={{ marginBottom: '0px' }}>You've successfully cancelled your registration, {name ? `, ${name}` : ''}!</h1>
-                <p>That's all you need to do. If you don't want to receive any more update emails from us, please visit <a href="/unsubscribe">this page</a> and fill out the form.</p>
+                <h1 style={{ marginBottom: '0px' }}>You've successfully cancelled your registration.</h1>
+                <p>That's all you need to do. If you don't want to receive any more update emails from us (if you subscribed on our home page), please visit <a href="/unsubscribe">this page</a> and fill out the form.</p>
                 <p><b>What made you leave?</b> We would like to hear any feedback that you have for us, so please send us an email at <a href="mailto:info@hackbackbetter.live">info@hackbackbetter.live</a> if you have any!</p>
             </div>
             </Modal>
