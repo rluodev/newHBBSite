@@ -65,7 +65,7 @@ export default async function handler(req, res) {
 				return res.status(422).json({ message: "Logged out due to inactivity." });
 			}
 			await client.close();
-			return res.status(200).json({ message: cookie });
+			return res.status(200).json({ message: "Success!" });
 			// Return 200 if everything is successful
 		} catch (error) {
 			console.log(error);
