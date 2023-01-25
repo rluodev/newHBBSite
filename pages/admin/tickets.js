@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import Icon from '@hackclub/icons'
-import BigModal from '../components/BigModal'
+import BigModal from '../../components/BigModal'
 import { useEffect, useState } from 'react';
 
 export default function Tickets() {
