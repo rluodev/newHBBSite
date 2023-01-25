@@ -60,8 +60,7 @@ export default async function handler(req, res) {
 			const existingLogin = (await aSessions.findOne({
 				aToken: body["token"]
 			}));
-			if (existingLogin && existingLogin["aDate"] + 600000 > new Date().valueOf()) return res.status(200).json({ message: existingLogin["cVal"] });
-			if (existingLogin && existingLogin["aDate"] + 600000 <= new Date().valueOf()) {
+			if (existingLogin) {
 				await aSessions.deleteOne({
 					aToken: body["token"]
 				});
