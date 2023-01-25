@@ -6,6 +6,28 @@ import { useEffect, useState } from 'react';
 
 export default function Admin() {
 	const [showModal, setShowModal] = useState(false);
+	useEffect(() => {
+		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
+			fetch('/api/adminLogin', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					token: localStorage.getItem('token')
+				})
+			}).then(async (response) => {
+				console.log(response);
+				if (response.ok) {
+					setShowModal(true);
+				} else {
+					setShowModal(false);
+					localStorage.removeItem('token');
+					window.location.href = '/adminLogin';
+				}
+			});
+		})
+	  }, [])
 	const checkAuth = setInterval(function () {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
 			fetch('/api/adminLogin', {
@@ -22,6 +44,7 @@ export default function Admin() {
 					setShowModal(true);
 				} else {
 					setShowModal(false);
+					localStorage.removeItem('token');
 					window.location.href = '/adminLogin';
 				}
 			});
@@ -70,6 +93,20 @@ export default function Admin() {
 						<p><b>What made you leave?</b> We would like to hear any feedback that you have for us, so please send us an email at <a href="mailto:info@hackbackbetter.live" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>info@hackbackbetter.live</a> if you have any!</p>
 					</div>
 				</BigModal>
+				<div style={{
+						width: '100%',
+						height: '100%',
+						border: 'none',
+						borderRadius: '8px',
+						border: '2px solid var(--purple)',
+						display: 'flex',
+						alignItems: 'center',
+						flexDirection: 'column',
+						justifyContent: 'center',
+						padding: '40px',
+						textAlign: 'center',
+						position: 'relative'
+					}}></div>
 			</div>
 
 		</>
