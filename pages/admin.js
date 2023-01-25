@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Icon from '@hackclub/icons'
-import aModal from '../components/aModal'
+import BigModal from '../components/BigModal'
 import { useEffect, useState } from 'react';
 
 export default function Admin() {
@@ -66,7 +66,7 @@ export default function Admin() {
 					<meta key="tw_card" name="twitter:card" content="summary_large_image" />
 					<meta key="robots" name="robots" content="noindex, nofollow" />
 				</Head>
-				<aModal visible={true} setVisible={() => ''} hideCloseButton={true}>
+				<BigModal visible={true} setVisible={() => ''} hideCloseButton={true}>
 					<div style={{
 						width: '100%',
 						height: '100%',
@@ -86,7 +86,7 @@ export default function Admin() {
 						<p>That's all you need to do. If you don't want to receive any more update emails from us (if you subscribed on our home page), please visit <a href="/unsubscribe" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>this page</a> and fill out the form.</p>
 						<p><b>What made you leave?</b> We would like to hear any feedback that you have for us, so please send us an email at <a href="mailto:info@hackbackbetter.live" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>info@hackbackbetter.live</a> if you have any!</p>
 					</div>
-				</aModal>
+				</BigModal>
 			</div>
 
 		</>
