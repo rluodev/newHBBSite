@@ -101,6 +101,7 @@ export default async function handler(req, res) {
 				data["approved"] = false;
 				data["Forms Received"] = false;
 				data["ticketed"] = false;
+				data["CheckedIn"] = false;
 				console.log(data["uuid"]);
 				console.log(await collection.insertOne(data));
 				client.close();
