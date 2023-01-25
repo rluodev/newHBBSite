@@ -99,6 +99,7 @@ export default async function handler(req, res) {
 				console.log(data);
 				data["uuid"] = uuidv4();
 				data["approved"] = false;
+				data["Forms Received"] = false;
 				data["ticketed"] = false;
 				console.log(data["uuid"]);
 				console.log(await collection.insertOne(data));
