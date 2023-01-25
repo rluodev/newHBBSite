@@ -3,6 +3,13 @@ import styles from '../../styles/Home.module.css'
 import Icon from '@hackclub/icons'
 import BigModal from '../../components/BigModal'
 import { useEffect, useState } from 'react';
+import React from "react";  
+import ReactDOM from "react-dom";  
+
+import { CollectionView } from "@grapecity/wijmo";  
+import { FlexGrid } from "@grapecity/wijmo.react.grid";  
+import { FlexGridFilter } from "@grapecity/wijmo.react.grid.filter";  
+import "@grapecity/wijmo.styles/wijmo.css";
 
 export default function Manage() {
 	const [showModal, setShowModal] = useState(false);

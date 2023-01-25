@@ -291,3 +291,9 @@
   margin-right: 1rem;
   max-width: 256px;
 }
+
+.wj-flexgrid {  
+  /* limit the grid's width and height */  
+  max-height: 300px;  
+  max-width: 32em;  
+}
