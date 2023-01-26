@@ -117,7 +117,6 @@ const columns = [
 
 export default function Manage() {
     const [showModal, setShowModal] = useState(false);
-    var rows = [];
     useEffect(() => {
         fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
             fetch('/api/CheckAuth', {
