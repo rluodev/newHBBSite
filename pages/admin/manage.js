@@ -2,7 +2,7 @@ import Head from 'next/head'
 import styles from '../../styles/Home.module.css'
 import Icon from '@hackclub/icons'
 import BigModal from '../../components/BigModal'
-import { useEffect, useState } from 'react';
+import { useEffect, useState, componentDidMount } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 
 const columns = [
@@ -138,7 +138,9 @@ export default function Manage() {
                 }
             });
         });
+        setToken(localStorage.getItem('token'));
     }, [])
+    const [token, setToken] = useState('');
     const rows = async () => {
         const a = await fetch('/api/GetRegistrations', {
             method: 'POST',
@@ -146,7 +148,7 @@ export default function Manage() {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                token: localStorage.getItem('token')
+                token: token
             })
         }).then(async response => response.json());
 
@@ -216,7 +218,7 @@ export default function Manage() {
                         <h1 style={{ marginBottom: '0px' }}>Admin Panel</h1>
                         <div style={{ width: '60%', margin: 'auto', marginTop: '2rem' }}>
                             <DataGrid
-                                rows={rows()}
+                                rows={rows}
                                 columns={columns}
                                 pageSize={20}
                                 autoHeight
