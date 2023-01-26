@@ -218,7 +218,7 @@ export default function Manage() {
                         <h1 style={{ marginBottom: '0px' }}>Admin Panel</h1>
                         <div style={{ width: '60%', margin: 'auto', marginTop: '2rem' }}>
                             <DataGrid
-                                rows={rows}
+                                rows={rows()}
                                 columns={columns}
                                 pageSize={20}
                                 autoHeight
