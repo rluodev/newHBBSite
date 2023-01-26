@@ -117,7 +117,7 @@ const columns = [
 
 export default function Manage() {
     const [showModal, setShowModal] = useState(false);
-
+    var rows = [];
     useEffect(() => {
         fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
             fetch('/api/CheckAuth', {
@@ -140,8 +140,8 @@ export default function Manage() {
             });
         });
     }, [])
-    const rows = () => {
-        fetch('/api/GetRegistrations', {
+    const rows = async () => {
+        const a = await fetch('/api/GetRegistrations', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -149,10 +149,9 @@ export default function Manage() {
             body: JSON.stringify({
                 token: localStorage.getItem('token')
             })
-        }).then(async response => {
-            const res = await response.json();
-            return res;
-        });
+        }).then(async response => response.json());
+
+        return a;
     };
     const checkAuth = setInterval(function () {
         fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
