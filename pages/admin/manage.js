@@ -117,15 +117,7 @@ const columns = [
 
 export default function Manage() {
 	const [showModal, setShowModal] = useState(false);
-	const rows = fetch('/api/GetRegistrations', {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify({
-			token: localStorage.getItem('token')
-		})
-	}).then(async response => await response.json());
+	
 	useEffect(() => {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
 			fetch('/api/CheckAuth', {
@@ -146,8 +138,17 @@ export default function Manage() {
 					window.location.href = '/adminLogin';
 				}
 			});
-		})
+		});
 	}, [])
+    const rows = fetch('/api/GetRegistrations', {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify({
+			token: localStorage.getItem('token')
+		})
+	}).then(async response => await response.json());
 	const checkAuth = setInterval(function () {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
 			fetch('/api/CheckAuth', {
