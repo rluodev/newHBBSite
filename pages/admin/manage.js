@@ -115,7 +115,7 @@ const columns = [
 
 // https://learnjsx.com/category/4/posts/nextjs-materialui-data-grid
 
-export const getProps = async() => {
+export const getStaticProps = async() => {
 	const rows = await fetch('/api/GetRegistrations', {
 		method: 'POST',
 		headers: {
@@ -219,7 +219,7 @@ export default function Manage() {
 						<h1 style={{ marginBottom: '0px' }}>Admin Panel</h1>
 						<div style={{ width: '60%', margin: 'auto', marginTop: '2rem' }}>
 							<DataGrid
-								rows={rows}
+								rows={getStaticProps()}
 								columns={columns}
 								pageSize={20}
 								autoHeight
