@@ -142,7 +142,7 @@ export default function Manage() {
     }, [])
     const [token, setToken] = useState('');
     const rows = async () => {
-        const a = await fetch('/api/GetRegistrations', {
+        const a = await fetch('https://dev.hackbackbetter.live/api/GetRegistrations', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
