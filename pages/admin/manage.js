@@ -116,24 +116,18 @@ const columns = [
 // https://learnjsx.com/category/4/posts/nextjs-materialui-data-grid
 
 export const getProps = async() => {
-	fetch('/api/GetRegistrations', {
+	const rows = await fetch('/api/GetRegistrations', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
 		},
 		body: JSON.stringify({
+			token: localStorage.getItem('token')
 		})
-	}).then(async (response) => {
-		console.log(response);
-		if (response.ok) {
-			const data = await response.json();
-			console.log(data);
-			return { props: { data } };
-		} else {
-			console.log("Error occurred while attempting to get registrations.");
-			return { props: { data: [] } };
-		}
-	});
+	}).then(response => response.json());
+	return {
+		props: { rows },
+	}
 };
 
 export default function Manage() {
