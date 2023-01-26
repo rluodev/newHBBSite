@@ -115,8 +115,9 @@ const columns = [
 
 // https://learnjsx.com/category/4/posts/nextjs-materialui-data-grid
 
-export const getStaticProps = async() => {
-	const rows = await fetch('/api/GetRegistrations', {
+export default function Manage() {
+	const [showModal, setShowModal] = useState(false);
+	const rows = fetch('/api/GetRegistrations', {
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json'
@@ -124,15 +125,7 @@ export const getStaticProps = async() => {
 		body: JSON.stringify({
 			token: localStorage.getItem('token')
 		})
-	}).then(response => response.json());
-	return {
-		props: { rows },
-	}
-};
-
-export default function Manage() {
-	const [showModal, setShowModal] = useState(false);
-	
+	}).then(async response => await response.json());
 	useEffect(() => {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
 			fetch('/api/CheckAuth', {
@@ -219,7 +212,7 @@ export default function Manage() {
 						<h1 style={{ marginBottom: '0px' }}>Admin Panel</h1>
 						<div style={{ width: '60%', margin: 'auto', marginTop: '2rem' }}>
 							<DataGrid
-								rows={getStaticProps()}
+								rows={rows}
 								columns={columns}
 								pageSize={20}
 								autoHeight
