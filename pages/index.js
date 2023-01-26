@@ -11,17 +11,6 @@ const social_image = '/social.png';
 
 const regex = /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9]))\.){3}(?:(2(5[0-5]|[0-4][0-9])|1[0-9][0-9]|[1-9]?[0-9])|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/;
 
-/*
-						<img src="/x.png" style={{
-							position: 'absolute',
-							bottom: '-20px',
-							right: '-40px',
-							width: '300px',
-							zIndex: '15',
-							filter: 'opacity(0.7)'
-						}} />
-*/
-
 const timelapseId = "402YMZJfp6kW02302E3r1RMe013Ub9AqlPwzr4VjD00HO7ME"
 
 export default function Home() {
@@ -127,7 +116,7 @@ export default function Home() {
 						overflow: 'hidden'
 					}}>
 						<h1 className={styles.title}>
-							HackBackBetter 2023
+							HackBackBetter<br/>2023
 						</h1>
 						<video
 							autoPlay
@@ -245,7 +234,7 @@ export default function Home() {
 							zIndex: '20'
 						}} className={styles.innerContent}>
 							<h2>What is HackBackBetter?</h2>
-							<p>HackBackBetter is a high school hackathon aimed towards new and intermediate-level hackers. We're inviting you and all high schoolers to participate in <span>2 days</span> of <span>coding</span>, <span>learning</span>, and <span>sharing</span>. Whether or not you've ever touched a line of code before, HackBackBetter will be a fun and enriching event for all.</p>
+							<p>HackBackBetter is an in-person high school hackathon aimed towards new and intermediate-level hackers. We're inviting you and all high schoolers to participate in <span>2 days</span> of <span>coding</span>, <span>learning</span>, and <span>sharing</span>. Whether or not you've ever touched a line of code before, HackBackBetter will be a fun and enriching event for all.</p>
 							<h2>What's a "hackathon"?</h2>
 							<p>Hackathons are in-person coding events where people come together to learn new skills, create fun projects, and make memories. There's also food, snacks, and drinks to fuel your creativity. Instead of hacking bank accounts like you hear in the news, you'll build something meaningful to you.</p>
 							<h2>Who can participate in HackBackBetter?</h2>
@@ -257,7 +246,14 @@ export default function Home() {
 							<h2>When and where is HackBackBetter 2023 taking place?</h2>
 							<p>HackBackBetter 2023 will take place on April 22nd-23rd at the South Bay Yacht Club in Alviso, CA (Location subject to change).</p>
 						</div>
-						
+						<img src="https://cdn.hackbackbetter.live/logo-full-light.png" style={{
+							position: 'absolute',
+							bottom: '-20px',
+							right: '-40px',
+							width: '300px',
+							zIndex: '15',
+							filter: 'opacity(0.7)'
+						}} />
 						
 					</div>
 
