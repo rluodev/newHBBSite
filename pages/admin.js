@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 
 export default function Admin() {
 	const [showModal, setShowModal] = useState(false);
+  const [token, setToken] = useState('');
 	useEffect(() => {
 		fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
 			fetch('/api/CheckAuth', {
@@ -26,6 +27,7 @@ export default function Admin() {
 					window.location.href = '/adminLogin';
 				}
 			});
+      		setToken(localStorage.getItem('token'));
 		})
 	  }, [])
 	const checkAuth = setInterval(function () {
@@ -36,7 +38,7 @@ export default function Admin() {
 					'Content-Type': 'application/json'
 				},
 				body: JSON.stringify({
-					token: localStorage.getItem('token')
+					token: token
 				})
 			}).then(async (response) => {
 				console.log(response);
