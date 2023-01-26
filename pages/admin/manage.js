@@ -9,7 +9,7 @@ const columns = [
     {
         field: 'name',
         headerName: 'Full Name',
-        width: 150,
+        width: 170,
         align: 'center'
     },
     {
@@ -47,7 +47,7 @@ const columns = [
     {
         field: 'tshirtSize',
         headerName: 'T-Shirt Size',
-        width: 80,
+        width: 120,
         align: 'center'
     },
     {
@@ -71,31 +71,31 @@ const columns = [
     {
         field: 'discord',
         headerName: 'Discord Username',
-        width: 150,
+        width: 200,
         align: 'center'
     },
     {
         field: 'approved',
         headerName: 'Approved',
-        width: 50,
+        width: 100,
         align: 'center'
     },
     {
         field: 'ticketed',
         headerName: 'Ticketed',
-        width: 50,
+        width: 100,
         align: 'center'
     },
     {
         field: 'forms',
         headerName: 'Forms Received',
-        width: 50,
+        width: 150,
         align: 'center'
     },
     {
         field: 'checkedIn',
         headerName: 'Checked In',
-        width: 50,
+        width: 150,
         align: 'center'
     },
     {
@@ -149,7 +149,10 @@ export default function Manage() {
             body: JSON.stringify({
                 token: localStorage.getItem('token')
             })
-        }).then(async response => await response.json());
+        }).then(async response => {
+            const res = await response.json();
+            return res;
+        });
     };
     const checkAuth = setInterval(function () {
         fetch('https://ip.yodacode.xyz').then(res => res.json()).then(({ geo }) => {
@@ -215,7 +218,7 @@ export default function Manage() {
                         <h1 style={{ marginBottom: '0px' }}>Admin Panel</h1>
                         <div style={{ width: '60%', margin: 'auto', marginTop: '2rem' }}>
                             <DataGrid
-                                rows={rows}
+                                rows={rows()}
                                 columns={columns}
                                 pageSize={20}
                                 autoHeight
