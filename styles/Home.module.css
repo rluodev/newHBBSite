@@ -128,8 +128,7 @@
 
   .sponsors {
     position: fixed;
-    top: 0px;
-    right: 0px;
+    bottom: 0px;
     width: 350px;
     height: 100%;
     background: black;
@@ -149,13 +148,13 @@
   }
 }
 
-@media (max-width: 1199px) {
+/*@media (max-width: 1199px) {
   .sponsors {
     background: black;
     color: white;
     padding: 30px;
   }
-}
+}*/
 
 .grid {
   display: flex;

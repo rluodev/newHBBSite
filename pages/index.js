@@ -141,7 +141,7 @@ export default function Home() {
 							<source src={`https://stream.mux.com/${timelapseId}/medium.mp4`} />
 						</video>
 						<p className={styles.description}>
-							An in-person hackathon aimed towards new and intermediate-level hackers!
+						Come and join us for a weekend of coding, collaboration and over $16,000 dollars in prizes! This event will be located at the South Bay Yacht Club in Alviso, CA (Location subject to change) on April 22-23, 2023 and will run from 9:00 AM to 6:00 PM each day. All participants will receive a swag pack (Including a t-shirt, laptop stickers, 2x $15 DoorDash coupons (sponsored by DoorDash), and etc.).
 						</p>
 						<center style={{
 							position: 'relative',
@@ -233,14 +233,14 @@ export default function Home() {
 							position: 'relative',
 							zIndex: '20'
 						}} className={styles.innerContent}>
-							<h2>What is HackBackBetter?</h2>
-							<p>HackBackBetter is an in-person high school hackathon aimed towards new and intermediate-level hackers. We're inviting you and all high schoolers to participate in <span>2 days</span> of <span>coding</span>, <span>learning</span>, and <span>sharing</span>. Whether or not you've ever touched a line of code before, HackBackBetter will be a fun and enriching event for all.</p>
-							<h2>What's a "hackathon"?</h2>
+							<h2>What is HackBackBetter 2023?</h2>
+							<p>HackBackBetter 2023 is a high school hackathon aimed towards middle- and high-school students who want to get their feet wet in software development!</p>
+							<h2></h2>
 							<p>Hackathons are in-person coding events where people come together to learn new skills, create fun projects, and make memories. There's also food, snacks, and drinks to fuel your creativity. Instead of hacking bank accounts like you hear in the news, you'll build something meaningful to you.</p>
-							<h2>Who can participate in HackBackBetter?</h2>
-							<p>We're inviting all high school students to participate in HackBackBetter <span>completely free</span>. If you'd still like to support us, however, <a href="#" onClick={e => { e.preventDefault(); setModal(true); splitbee.track("Donate Click", { location: 'copy' }); }}>you can donate here</a>. Since we're a high-school and below hackathon, college/university students won't be able to attend.</p>
-							<h2>Will there be prizes? 👀</h2>
-							<p>Yes! Prizes are listed on <a href="https://hackbackbetter.devpost.com/" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="devpost-click">our DevPost page</a>, and we'll be updating them to the full list of prizes once we are ready! Why don't you <a href="#" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="scroll-to-top">drop your email</a> so we can keep you updated? We promise we won't spam you!</p>
+							<h2>Is there an age limit for participants?</h2>
+							<p>Yes, all participants must be enrolled and hold active student status in an accredited middle-school or high-school (and be between the ages of 13 and 18).</p>
+							<h2>What do I get for joining/winning?</h2>
+							<p>We're glad you asked! Our prizes are listed on <a href="https://hackbackbetter.devpost.com/" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }}>our DevPost page</a>, and we'll be updating them to the full list of prizes once we are ready! Why don't you <a href="#" style={{ textDecoration: 'underline', color: 'var(--l-purple)' }} data-splitbee-event="Interaction" data-splitbee-event-type="scroll-to-top">register</a> so you'll be up-to-date on everything about the hackathon? We promise we won't spam you!</p>
 							<h2>What are the themes of HackBackBetter?</h2>
 							<p>There are two main themes for HackBackBetter 2023. The first is <span>returning from COVID-19</span>, and the second is <span>environmental preservation</span>.</p>
 							<h2>When and where is HackBackBetter 2023 taking place?</h2>
@@ -261,25 +261,8 @@ export default function Home() {
 				<div className={styles.sponsors} style={{
 					overflowY: 'scroll'
 				}}>
-					<a href="/register" target="_blank">
-						<button className={styles.altButton} style={{
-							background: 'rgba(var(--purple-3-values), 0.3)'
-						}}>Register here!</button>
-					</a>
-					<button className={styles.altButton} onClick={() => {
-						setModal(true);
-					}} data-splitbee-event="Donate Click" data-splitbee-event-location="sidebar">Donate</button>
-					<a href="/discord" target="_blank" data-splitbee-event="Discord Click" data-splitbee-event-location="sidebar">
-						<button className={styles.altButton}>Discord</button>
-					</a>
-					<a href="/finances" target="_blank" data-splitbee-event="Finances Click" data-splitbee-event-location="sidebar">
-						<button className={styles.altButton}>Finances</button>
-					</a>
-					<a href="/github" target="_blank">
-						<button className={styles.altButton}>GitHub</button>
-					</a>
 					<h1>Sponsors</h1>
-					<p>HackBackBetter wouldn't be possible without help from our sponsors. Want to help make HackBackBetter incredible? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} data-splitbee-event="Email Click" data-splitbee-event-location="sidebar">sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
+					<p>We would like to thank our sponsors (listed below) for helping us make this hackathon a reality! Want to be a part of something awesome? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }}>sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
 						e.preventDefault();
 						splitbee.track("Prospectus Download", {
 							...(email ? { email } : {})
@@ -287,7 +270,7 @@ export default function Home() {
 						window.open('https://cdn.hackbackbetter.live/prospectus.pdf');
 					}}>prospectus</a> to get involved!</p>
 					<br />
-					<h2>SPECIAL THANKS TO</h2>
+					<h2>SPONSORS: </h2>
 					<a href="https://doordash.com/">
 						<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
 					</a>
@@ -321,13 +304,30 @@ export default function Home() {
 									fontSize: '12px',
 									color: '#8899aa',
 									lineHeight: '0px'
-								}}>and other generous donors
+								}}>and other very cool donors
 									<Icon glyph="external" size={16} style={{
 										transform: 'translate(1px, 3px)'
 									}} />
 								</p>
 							</center>
 						</div>
+					</a>
+					<a href="/register" target="_blank">
+						<button className={styles.altButton} style={{
+							background: 'rgba(var(--purple-3-values), 0.3)'
+						}}>Register here!</button>
+					</a>
+					<button className={styles.altButton} onClick={() => {
+						setModal(true);
+					}} data-splitbee-event="Donate Click" data-splitbee-event-location="sidebar">Donate</button>
+					<a href="/discord" target="_blank" data-splitbee-event="Discord Click" data-splitbee-event-location="sidebar">
+						<button className={styles.altButton}>Discord</button>
+					</a>
+					<a href="/finances" target="_blank" data-splitbee-event="Finances Click" data-splitbee-event-location="sidebar">
+						<button className={styles.altButton}>Finances</button>
+					</a>
+					<a href="/github" target="_blank">
+						<button className={styles.altButton}>GitHub</button>
 					</a>
 				</div>
 				<div style={{
