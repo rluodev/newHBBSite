@@ -269,9 +269,6 @@ export default function Home() {
 					<a href="/finances" target="_blank">
 						<button className={styles.altButton}>Finances</button>
 					</a>
-					<a href="/github" target="_blank">
-						<button className={styles.altButton}>GitHub</button>
-					</a>
 				</div>
 				<div style={{
 					background: '#ddd',
@@ -294,9 +291,6 @@ export default function Home() {
 					<div style={{ marginTop: '10px', marginBottom: '-8px' }}>
 						<a href="https://instagram.com/hackbackbetter2023">
 							<Icon glyph='instagram' size={32} />
-						</a>
-						<a href="https://github.com" disabled="disabled">
-							<Icon glyph='github' size={32} />
 						</a>
 						<a href="https://bank.hackclub.com/hackbackbetter">
 							<Icon glyph='bank-account' size={32} />
