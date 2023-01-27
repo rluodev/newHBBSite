@@ -116,7 +116,7 @@ export default function Home() {
 						overflow: 'hidden'
 					}}>
 						<h1 className={styles.title}>
-							HackBackBetter<br/>2023<br/>
+							HackBackBetter<br />2023<br />
 						</h1>
 						<video
 							autoPlay
@@ -141,7 +141,7 @@ export default function Home() {
 							<source src={`https://stream.mux.com/${timelapseId}/medium.mp4`} />
 						</video>
 						<p className={styles.description}>
-						Come and join us for a weekend of coding, collaboration and over $16,000 dollars in prizes! This event will be located at the South Bay Yacht Club in Alviso, CA (Location subject to change) on April 22-23, 2023 and will run from 9:00 AM to 6:00 PM each day. All participants will receive a swag pack (Including a t-shirt, laptop stickers, 2x $15 DoorDash coupons (sponsored by DoorDash), and etc.).
+							Come and join us for a weekend of coding, collaboration and over $16,000 dollars in prizes/swag! This event will be located at the South Bay Yacht Club in Alviso, CA (Location subject to change) on April 22-23, 2023 and will run from 9:00 AM to 6:00 PM each day. All participants will receive a swag pack (Including a t-shirt, laptop stickers, 2x $15 DoorDash coupons (sponsored by DoorDash), and etc.).
 						</p>
 						<center style={{
 							position: 'relative',
@@ -183,41 +183,22 @@ export default function Home() {
 											} : {}),
 											height: '52px'
 										}}>
-											<input placeholder="Email" type="email" style={{
-												position: 'absolute',
-												border: 'none',
-												width: 'calc(100% - 50px)',
-												background: 'transparent',
-												height: '100%',
-												top: '0px',
-												left: '0px',
-												outline: 'none',
-												fontSize: '18px',
-												padding: '13px',
-												color: 'white',
-												fontFamily: 'var(--font-stack)'
-											}} value={email} onKeyUp={e => {
-												if (e?.key == 'Enter') handleFormEnter();
-											}} onChange={e => setEmail(e.target.value)} disabled={loading} />
-											<button className={styles.button} style={{
-												width: '40px',
-												height: '40px',
-												fontSize: '20px',
-												padding: '6px',
-												border: '1px solid var(--purple)',
-												marginLeft: '20px',
-												position: 'absolute',
-												borderRadius: '2px',
-												top: '4px',
-												right: '4px',
-												fontWeight: 'bolder',
-												...(loading ? {
-													filter: 'brightness(0.5)',
-													cursor: 'default'
-												} : {})
-											}} onClick={handleFormEnter} disabled={loading}>
-												→
-											</button>
+											<a href="/register" target="_blank">
+												<button style={{
+													position: 'absolute',
+													border: 'none',
+													width: 'calc(100% - 50px)',
+													background: 'rgba(var(--purple-3-values), 0.3)',
+													height: '100%',
+													top: '0px',
+													left: '0px',
+													outline: 'none',
+													fontSize: '18px',
+													padding: '13px',
+													color: 'white',
+													fontFamily: 'var(--font-stack)'
+												}}>Register here!</button>
+											</a>
 										</div>
 									</div>
 
@@ -235,8 +216,8 @@ export default function Home() {
 						}} className={styles.innerContent}>
 							<h2>What is HackBackBetter 2023?</h2>
 							<p>HackBackBetter 2023 is a high school hackathon aimed towards middle- and high-school students who want to get their feet wet in software development!</p>
-							<h2></h2>
-							<p>Hackathons are in-person coding events where people come together to learn new skills, create fun projects, and make memories. There's also food, snacks, and drinks to fuel your creativity. Instead of hacking bank accounts like you hear in the news, you'll build something meaningful to you.</p>
+							<h2>What are hackathons?</h2>
+							<p>Traditional hackathons are events where participants are just slogging through code the whole day. That might seem fun to some people, but not to most others. Instead of doing that, we'll have many events, games, and side-activities to make sure that you'll leave feeling not just like you built some special code, but also that you made some awesome friends and memories. We'll also have food/snacks!</p>
 							<h2>Is there an age limit for participants?</h2>
 							<p>Yes, all participants must be enrolled and hold active student status in an accredited middle-school or high-school (and be between the ages of 13 and 18).</p>
 							<h2>What do I get for joining/winning?</h2>
@@ -254,7 +235,7 @@ export default function Home() {
 							zIndex: '15',
 							filter: 'opacity(0.7)'
 						}} />
-						
+
 					</div>
 
 				</main>

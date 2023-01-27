@@ -117,13 +117,13 @@
   color: rgb(45, 74, 136);
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 0px) {
   .main {
-    width: calc(100vw - 350px);
+    width: calc(100vw - 0px);
   }
 
   .bottomFooter {
-    width: calc(100vw - 350px);
+    width: calc(100vw - 0px);
   }
 
   .sponsors {
