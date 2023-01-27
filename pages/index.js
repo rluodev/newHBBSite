@@ -133,7 +133,7 @@ export default function Home() {
 							src="https://cdn.hackbackbetter.live/backgroundimg.jpg"
 						/>
 						<p className={styles.description}>
-							Come and join us for a weekend of coding, collaboration and over $16,000 dollars in prizes/swag! This event will be located at the South Bay Yacht Club in Alviso, CA (Location subject to change) on April 22-23, 2023 and will run from 9:00 AM to 6:00 PM each day. All participants will receive a swag pack (Including a t-shirt, laptop stickers, 2x $15 DoorDash coupons (sponsored by DoorDash), and etc.).
+							Come and join us for a weekend of coding, collaboration and over $16,000 dollars in prizes/swag! This event will be located at the South Bay Yacht Club in Alviso, CA (Location subject to change) on April 22-23, 2023 and will run from 9:00 AM to 7:00 PM each day. All participants will receive a swag pack (Including a t-shirt, laptop stickers, 2x $15 DoorDash coupons (sponsored by DoorDash), and etc.).
 						</p>
 						<center style={{
 							position: 'relative',
@@ -187,6 +187,8 @@ export default function Home() {
 							<p>There are two main themes for HackBackBetter 2023. The first is <span>returning from COVID-19</span>, and the second is <span>environmental preservation</span>.</p>
 							<h2>When and where is HackBackBetter 2023 taking place?</h2>
 							<p>HackBackBetter 2023 will take place on April 22nd-23rd at the South Bay Yacht Club in Alviso, CA (Location subject to change).</p>
+							<h2>Do you offer any travel stipends/scholarships?</h2>
+							<p>Unfortunately, due to limited funding, we are unable to offer travel stipends or scholarships to any participants at this time. This may change in the future, so please continue checking this page for updates.</p>
 						</div>
 						<img src="https://cdn.hackbackbetter.live/logo-full-light.png" style={{
 							position: 'absolute',
@@ -281,12 +283,14 @@ export default function Home() {
 					padding: '20px',
 					flexDirection: 'column'
 				}} className={styles.bottomFooter}>
-					<div>
-						HackBackBetter is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club). <br />
-						Nonprofit EIN: 81-2908499.
-						<br />
-						We'd like to thank <a href="https://hackoc.org">HackOC</a> for making their website open source and allowing us to borrow some of their code.
-					</div>
+					<center>
+						<div>
+							HackBackBetter is fiscally sponsored by The Hack Foundation (d.b.a. Hack Club). <br />
+							Nonprofit EIN: 81-2908499.
+							<br />
+							We'd like to thank <a href="https://hackoc.org" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }}>HackOC</a> for making their website open source and allowing us to borrow some of their code.
+						</div>
+					</center>
 					<div style={{ marginTop: '10px', marginBottom: '-8px' }}>
 						<a href="https://instagram.com/hackbackbetter2023">
 							<Icon glyph='instagram' size={32} />
