@@ -120,14 +120,7 @@ export default function Home() {
 						}}>
 							HackBackBetter<br />2023<br />
 						</h1>
-						<video
-							autoPlay
-							muted
-							loop
-							playsInline
-							poster={`https://image.mux.com/${timelapseId}/thumbnail.png?width=214&height=121&fit_mode=pad`}
-							duration={2000}
-							style={{
+						<img style={{
 								position: 'absolute',
 								bottom: 0,
 								left: 0,
@@ -138,10 +131,8 @@ export default function Home() {
 								objectFit: 'cover',
 								zIndex: -1
 							}}
-						>
-							<source src={`https://stream.mux.com/${timelapseId}.m3u8`} />
-							<source src={`https://stream.mux.com/${timelapseId}/medium.mp4`} />
-						</video>
+							src="https://cdn.hackbackbetter.live/backgroundimg.jpg"
+						/>
 						<p className={styles.description}>
 							Come and join us for a weekend of coding, collaboration and over $16,000 dollars in prizes/swag! This event will be located at the South Bay Yacht Club in Alviso, CA (Location subject to change) on April 22-23, 2023 and will run from 9:00 AM to 6:00 PM each day. All participants will receive a swag pack (Including a t-shirt, laptop stickers, 2x $15 DoorDash coupons (sponsored by DoorDash), and etc.).
 						</p>
