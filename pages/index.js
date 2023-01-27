@@ -154,8 +154,6 @@ export default function Home() {
 							<p className={styles.description} style={{ color: 'white' }}>Register to attend!</p>
 							<center className={styles.inputCenter} style={{
 								display: 'block',
-								marginTop: '1rem',
-								marginBottom: '1rem',
 								height: '80px',
 								width: '200px',
 								display: 'flex',
