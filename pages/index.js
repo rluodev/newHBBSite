@@ -210,16 +210,11 @@ export default function Home() {
 					</div>
 
 				</main>
-				<div className={styles.sponsors} style={{
-					overflowY: 'scroll'
-				}}>
+				<div className={styles.sponsors}>
 					<h1>Sponsors</h1>
 					<p>We would like to thank our sponsors (listed below) for helping us make this hackathon a reality! Want to be a part of something awesome? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }}>sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
 						e.preventDefault();
-						splitbee.track("Prospectus Download", {
-							...(email ? { email } : {})
-						});
-						window.open('https://cdn.hackbackbetter.live/prospectus.pdf');
+						window.open('https://hackbackbetter.live/prospectus');
 					}}>prospectus</a> to get involved!</p>
 					<br />
 					<h2>SPONSORS: </h2>
@@ -234,8 +229,6 @@ export default function Home() {
 					</a>
 					<a href="https://bank.hackclub.com/hackbackbetter/donations" target="_blank">
 						<div style={{
-							width: '300px',
-							maxWidth: '100%',
 							height: '100px',
 							border: '2px solid transparent',
 							marginTop: '10px',
