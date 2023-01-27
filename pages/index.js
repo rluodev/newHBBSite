@@ -122,6 +122,9 @@ export default function Home() {
 						</h1>
 						<center style={{
 							position: 'absolute',
+							bottom: 0,
+							left: 0,
+							right: 0,
 							height: 'auto!important',
 							width: '100% !important',
 							objectFit: 'cover',
