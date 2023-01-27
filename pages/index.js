@@ -168,6 +168,7 @@ export default function Home() {
 										background: 'rgba(var(--purple-3-values), 0.3)',
 										height: '100%',
 										marginTop: '1rem',
+										marginBottom: '1rem',
 										top: '0px',
 										left: '0px',
 										outline: 'none',
