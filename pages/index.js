@@ -147,7 +147,7 @@ export default function Home() {
 							position: 'relative',
 							height: '55px'
 						}}>
-							<p style={'white'}>Register to attend!</p>
+							<p style={{color: 'white'}}>Register to attend!</p>
 							<div style={{
 								background: 'black',
 								padding: '0px',
