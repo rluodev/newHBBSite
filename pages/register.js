@@ -177,6 +177,7 @@ export default function Register() {
 						HackBackBetter 2023
 						<span style={{ marginLeft: '-6px' }}>{' '}Registration</span>
 					</h1>
+					<p className={styles.title} style={{fontSize: '1rem'}}>Join us on April 22-23 9AM-7PM at the South Bay Yacht Club (Location subject to change) for two fun days of hacking and learning!</p>
 					<form onSubmit={e => e.preventDefault()}>
 						{sections.map((section, i) => {
 							return (
