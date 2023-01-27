@@ -223,13 +223,13 @@ export default function Home() {
 						}}>prospectus</a> to get involved!</p>
 						<br />
 						<h2>HackBackBetter 2023 is made possible thanks to: </h2>
-						<a href="https://doordash.com/">
+						<a href="https://doordash.com/" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
 						</a>
-						<a href="https://wolfram.com">
+						<a href="https://wolfram.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/WolframLogo.png" />
 						</a>
-						<a href="https://echo3d.com">
+						<a href="https://echo3d.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
 						</a>
 					</center>
