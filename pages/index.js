@@ -163,7 +163,7 @@ export default function Home() {
 								<a href="/register" target="_blank">
 									<button className={styles.altButton} style={{
 										position: 'absolute',
-										width: 'calc(100%)',
+										width: '200px',
 										background: 'rgba(var(--purple-3-values), 0.3)',
 										height: '100%',
 										outline: 'none',
