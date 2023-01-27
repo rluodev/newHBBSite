@@ -168,8 +168,6 @@ export default function Home() {
 										width: 'calc(100%)',
 										background: 'rgba(var(--purple-3-values), 0.3)',
 										height: '100%',
-										top: '0px',
-										left: '0px',
 										outline: 'none',
 										fontSize: '18px',
 										padding: '13px',
