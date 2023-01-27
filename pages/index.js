@@ -159,7 +159,6 @@ export default function Home() {
 								marginTop: '1rem',
 								marginBottom: '1rem',
 								display: 'flex',
-								position: 'absolute',
 							}}>
 								<a href="/register" target="_blank">
 									<button className={styles.altButton} style={{
