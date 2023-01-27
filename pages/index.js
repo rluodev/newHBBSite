@@ -147,34 +147,46 @@ export default function Home() {
 							position: 'relative',
 							height: '55px'
 						}}>
-							<p style={{color: 'white'}}>Register to attend!</p>
-							<div style={{
-								background: 'black',
-								padding: '0px',
-								borderRadius: '6px',
-								maxWidth: '300px',
-								height: '53px',
-								textAlign: 'center',
-								boxSizing: 'border-box',
-								width: '300px'
+							<p style={'white'}>Register to attend!</p>
+							<center className={styles.inputCenter} style={{
+								display: 'block',
+								marginTop: '2rem',
+								display: 'flex',
+								position: 'absolute',
+								top: '0px',
+								left: '50%',
+								transform: 'translateX(-50%)'
 							}}>
-								<a href="/register" target="_blank">
-									<button style={{
-										position: 'absolute',
-										border: 'none',
-										width: 'calc(100% - 50px)',
-										background: 'rgba(var(--purple-3-values), 0.3)',
-										height: '100%',
-										top: '0px',
-										left: '0px',
-										outline: 'none',
-										fontSize: '18px',
-										padding: '13px',
-										color: 'white',
-										fontFamily: 'var(--font-stack)'
-									}}>Register here!</button>
-								</a>
-							</div>
+								<div style={{
+									background: 'black',
+									padding: '0px',
+									borderRadius: '6px',
+									maxWidth: '300px',
+									height: '53px',
+									textAlign: 'center',
+									boxSizing: 'border-box',
+									width: '300px'
+								}}>
+
+									<a href="/register" target="_blank">
+										<button style={{
+											position: 'absolute',
+											border: 'none',
+											width: 'calc(100% - 50px)',
+											background: 'rgba(var(--purple-3-values), 0.3)',
+											height: '100%',
+											top: '0px',
+											left: '0px',
+											outline: 'none',
+											fontSize: '18px',
+											padding: '13px',
+											color: 'white',
+											fontFamily: 'var(--font-stack)'
+										}}>Register here!</button>
+									</a>
+								</div>
+
+							</center>
 						</center>
 					</div>
 
