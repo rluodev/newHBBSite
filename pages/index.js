@@ -148,12 +148,14 @@ export default function Home() {
 						<center style={{
 							position: 'relative',
 							height: '55px',
+							marginTop: '1rem',
+							marginBottom: '1rem'
 						}}>
 							<p className={styles.description} style={{ color: 'white' }}>Register to attend!</p>
 							<center className={styles.inputCenter} style={{
 								display: 'block',
-								marginTop: '2rem',
-								marginBottom: '2rem',
+								marginTop: '1rem',
+								marginBottom: '1rem',
 								height: '80px',
 								width: '200px',
 								display: 'flex',
@@ -168,8 +170,6 @@ export default function Home() {
 										width: 'calc(100%)',
 										background: 'rgba(var(--purple-3-values), 0.3)',
 										height: '100%',
-										marginTop: '2rem',
-										marginBottom: '2rem',
 										top: '0px',
 										left: '0px',
 										outline: 'none',
