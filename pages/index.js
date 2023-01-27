@@ -157,34 +157,22 @@ export default function Home() {
 								left: '50%',
 								transform: 'translateX(-50%)'
 							}}>
-								<div style={{
-									background: 'black',
-									padding: '0px',
-									borderRadius: '6px',
-									maxWidth: '300px',
-									height: '53px',
-									textAlign: 'center',
-									boxSizing: 'border-box',
-									width: '300px'
-								}}>
-
-									<a href="/register" target="_blank">
-										<button style={{
-											position: 'absolute',
-											border: 'none',
-											width: 'calc(100% - 50px)',
-											background: 'rgba(var(--purple-3-values), 0.3)',
-											height: '100%',
-											top: '0px',
-											left: '0px',
-											outline: 'none',
-											fontSize: '18px',
-											padding: '13px',
-											color: 'white',
-											fontFamily: 'var(--font-stack)'
-										}}>Register here!</button>
-									</a>
-								</div>
+								<a href="/register" target="_blank">
+									<button style={{
+										position: 'absolute',
+										border: 'none',
+										width: 'calc(100% - 50px)',
+										background: 'rgba(var(--purple-3-values), 0.3)',
+										height: '100%',
+										top: '0px',
+										left: '0px',
+										outline: 'none',
+										fontSize: '18px',
+										padding: '13px',
+										color: 'white',
+										fontFamily: 'var(--font-stack)'
+									}}>Register here!</button>
+								</a>
 
 							</center>
 						</center>
@@ -283,11 +271,11 @@ export default function Home() {
 					</a>
 					<button className={styles.altButton} onClick={() => {
 						setModal(true);
-					}} data-splitbee-event="Donate Click" data-splitbee-event-location="sidebar">Donate</button>
-					<a href="/discord" target="_blank" data-splitbee-event="Discord Click" data-splitbee-event-location="sidebar">
+					}}>Donate</button>
+					<a href="/discord" target="_blank">
 						<button className={styles.altButton}>Discord</button>
 					</a>
-					<a href="/finances" target="_blank" data-splitbee-event="Finances Click" data-splitbee-event-location="sidebar">
+					<a href="/finances" target="_blank">
 						<button className={styles.altButton}>Finances</button>
 					</a>
 					<a href="/github" target="_blank">
