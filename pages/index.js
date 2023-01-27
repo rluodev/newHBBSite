@@ -221,16 +221,18 @@ export default function Home() {
 						window.open('https://hackbackbetter.live/prospectus');
 					}}>prospectus</a> to get involved!</p>
 					<br />
-					<h2>SPONSORS: </h2>
-					<a href="https://doordash.com/">
-						<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
-					</a>
-					<a href="https://wolfram.com">
-						<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/WolframLogo.png" />
-					</a>
-					<a href="https://echo3d.com">
-						<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
-					</a>
+					<center>
+						<h2>SPONSORS: </h2>
+						<a href="https://doordash.com/">
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
+						</a>
+						<a href="https://wolfram.com">
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/WolframLogo.png" />
+						</a>
+						<a href="https://echo3d.com">
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
+						</a>
+					</center>
 					<center>
 					<div style={{
 						height: '100px',
