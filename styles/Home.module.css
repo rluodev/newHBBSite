@@ -127,10 +127,6 @@
   }
 
   .sponsors {
-    position: fixed;
-    bottom: 0px;
-    width: 350px;
-    height: 100%;
     background: black;
     color: white;
     padding: 30px;
