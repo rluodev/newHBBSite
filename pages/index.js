@@ -216,13 +216,13 @@ export default function Home() {
 
 				</main>
 				<div className={styles.sponsors}>
-					<h1>Sponsors</h1>
-					<p>We would like to thank our sponsors (listed below) for helping us make this hackathon a reality! Want to be a part of something awesome? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }}>sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
-						e.preventDefault();
-						window.open('https://hackbackbetter.live/prospectus');
-					}}>prospectus</a> to get involved!</p>
-					<br />
 					<center>
+						<h1>Sponsors</h1>
+						<p>We would like to thank our sponsors (listed below) for helping us make this hackathon a reality! Want to be a part of something awesome? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }}>sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
+							e.preventDefault();
+							window.open('https://hackbackbetter.live/prospectus');
+						}}>prospectus</a> to get involved!</p>
+						<br />
 						<h2>HackBackBetter 2023 is made possible thanks to: </h2>
 						<a href="https://doordash.com/">
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
