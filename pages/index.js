@@ -147,11 +147,12 @@ export default function Home() {
 							position: 'relative',
 							height: '55px'
 						}}>
-							<p style={{ colpr: 'white' }}>Register to attend!</p>
+							<p style={{ color: 'white' }}>Register to attend!</p>
 							<center className={styles.inputCenter} style={{
 								display: 'block',
 								marginTop: '2rem',
-								width: '150px',
+								height: '80px',
+								width: '200px',
 								display: 'flex',
 								position: 'absolute',
 								top: '0px',
