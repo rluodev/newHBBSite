@@ -173,7 +173,7 @@ export default function Register() {
 			}}>
 
 				<main className={styles.main}>
-					<h1 className={styles.title} style={{ color: 'white' }}>
+					<h1 className={styles.title} style={{ color: 'black' }}>
 						HackBackBetter 2023
 						<span style={{ marginLeft: '-6px' }}>{' '}Registration</span><br />
 					</h1>
