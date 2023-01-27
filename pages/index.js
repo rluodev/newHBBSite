@@ -120,14 +120,21 @@ export default function Home() {
 						}}>
 							HackBackBetter<br />2023<br />
 						</h1>
-						<center>
+						<center style={{
+							position: 'absolute',
+							height: 'auto!important',
+							width: '100% !important',
+							objectFit: 'cover',
+							zIndex: -1
+						}}>
 							<img style={{
-									height: 'auto!important',
-									width: '100% !important',
-									minHeight: '1580px',
-									objectFit: 'cover',
-									zIndex: -1
-								}}
+								position: 'absolute',
+								height: 'auto!important',
+								width: '100% !important',
+								minHeight: '1580px',
+								objectFit: 'cover',
+								zIndex: -1
+							}}
 								src="https://cdn.hackbackbetter.live/backgroundimg.jpg"
 							/>
 						</center>
