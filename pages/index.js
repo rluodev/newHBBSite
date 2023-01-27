@@ -147,7 +147,7 @@ export default function Home() {
 							position: 'relative',
 							height: '55px'
 						}}>
-							<p style={'white'}>Register to attend!</p>
+							<p style={{colpr: 'white'}}>Register to attend!</p>
 							<center className={styles.inputCenter} style={{
 								display: 'block',
 								marginTop: '2rem',
@@ -158,7 +158,7 @@ export default function Home() {
 								transform: 'translateX(-50%)'
 							}}>
 								<a href="/register" target="_blank">
-									<button style={{
+									<button className={styles.altButton} style={{
 										position: 'absolute',
 										border: 'none',
 										width: 'calc(100% - 50px)',
@@ -200,8 +200,8 @@ export default function Home() {
 						</div>
 						<img src="https://cdn.hackbackbetter.live/logo-full-light.png" style={{
 							position: 'absolute',
-							bottom: '-20px',
-							right: '-40px',
+							bottom: '20px',
+							right: '40px',
 							width: '300px',
 							zIndex: '15',
 							filter: 'opacity(0.7)'
