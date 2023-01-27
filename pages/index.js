@@ -115,7 +115,9 @@ export default function Home() {
 						position: 'relative',
 						overflow: 'hidden'
 					}}>
-						<h1 className={styles.title}>
+						<h1 className={styles.title} style={{
+							paddingBottom: '1rem'
+						}}>
 							HackBackBetter<br />2023<br />
 						</h1>
 						<video
