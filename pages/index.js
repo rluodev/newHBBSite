@@ -147,7 +147,7 @@ export default function Home() {
 						</p>
 						<center style={{
 							position: 'relative',
-							height: '55px'
+							height: '55px',
 						}}>
 							<p className={styles.description} style={{ color: 'white' }}>Register to attend!</p>
 							<center className={styles.inputCenter} style={{
@@ -167,6 +167,7 @@ export default function Home() {
 										width: 'calc(100%)',
 										background: 'rgba(var(--purple-3-values), 0.3)',
 										height: '100%',
+										marginTop: '1rem',
 										top: '0px',
 										left: '0px',
 										outline: 'none',
