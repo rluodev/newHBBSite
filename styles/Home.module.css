@@ -89,7 +89,7 @@
 
 @media (min-width: 800px) {
   .innerContent {
-    max-width: 60vw;
+    max-width: 80vw;
   }  
   .title {
     transform: scale(160%);

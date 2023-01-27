@@ -149,7 +149,7 @@ export default function Home() {
 							position: 'relative',
 							height: '55px'
 						}}>
-							<p style={{ color: 'white' }}>Register to attend!</p>
+							<p className={styles.description} style={{ color: 'white' }}>Register to attend!</p>
 							<center className={styles.inputCenter} style={{
 								display: 'block',
 								marginTop: '2rem',
@@ -164,7 +164,6 @@ export default function Home() {
 								<a href="/register" target="_blank">
 									<button className={styles.altButton} style={{
 										position: 'absolute',
-										border: 'none',
 										width: 'calc(100%)',
 										background: 'rgba(var(--purple-3-values), 0.3)',
 										height: '100%',
