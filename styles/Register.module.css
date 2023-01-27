@@ -123,6 +123,8 @@
 @media (min-width: 1200px) {
 	.main {
 		width: calc(100vw);
+		background: #201240;
+		color: white;
 	}
 
 	.sponsors {
