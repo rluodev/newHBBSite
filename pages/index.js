@@ -147,10 +147,11 @@ export default function Home() {
 							position: 'relative',
 							height: '55px'
 						}}>
-							<p style={{colpr: 'white'}}>Register to attend!</p>
+							<p style={{ colpr: 'white' }}>Register to attend!</p>
 							<center className={styles.inputCenter} style={{
 								display: 'block',
 								marginTop: '2rem',
+								width: '150px',
 								display: 'flex',
 								position: 'absolute',
 								top: '0px',
@@ -161,7 +162,7 @@ export default function Home() {
 									<button className={styles.altButton} style={{
 										position: 'absolute',
 										border: 'none',
-										width: 'calc(100% - 50px)',
+										width: 'calc(100%)',
 										background: 'rgba(var(--purple-3-values), 0.3)',
 										height: '100%',
 										top: '0px',
@@ -227,14 +228,15 @@ export default function Home() {
 					<a href="https://echo3d.com">
 						<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
 					</a>
-					<a href="https://bank.hackclub.com/hackbackbetter/donations" target="_blank">
-						<div style={{
-							height: '100px',
-							border: '2px solid transparent',
-							marginTop: '10px',
-							background: '#8899aa33',
-							borderRadius: '8px'
-						}} className={styles.sponsor}>
+					<center>
+					<div style={{
+						height: '100px',
+						border: '2px solid transparent',
+						marginTop: '10px',
+						background: '#8899aa33',
+						borderRadius: '8px'
+					}} className={styles.sponsor}>
+						<a href="https://bank.hackclub.com/hackbackbetter/donations" target="_blank">
 							<center>
 								<h2 style={{
 									marginBottom: '0px',
@@ -255,8 +257,10 @@ export default function Home() {
 									}} />
 								</p>
 							</center>
-						</div>
-					</a>
+						</a>
+					</div>
+					</center>
+
 					<a href="/register" target="_blank">
 						<button className={styles.altButton} style={{
 							background: 'rgba(var(--purple-3-values), 0.3)'
