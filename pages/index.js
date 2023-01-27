@@ -222,7 +222,7 @@ export default function Home() {
 					}}>prospectus</a> to get involved!</p>
 					<br />
 					<center>
-						<h2>SPONSORS: </h2>
+						<h2>HackBackBetter 2023 is made possible thanks to: </h2>
 						<a href="https://doordash.com/">
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
 						</a>
@@ -234,36 +234,37 @@ export default function Home() {
 						</a>
 					</center>
 					<center>
-					<div style={{
-						height: '100px',
-						border: '2px solid transparent',
-						marginTop: '10px',
-						background: '#8899aa33',
-						borderRadius: '8px'
-					}} className={styles.sponsor}>
-						<a href="https://bank.hackclub.com/hackbackbetter/donations" target="_blank">
-							<center>
-								<h2 style={{
-									marginBottom: '0px',
-									whiteSpace: 'nowrap',
-									textOverflow: 'ellipsis',
-									width: 'calc(100% - 60px)',
-									overflow: 'hidden'
-								}}>{donor}</h2>
-								<p style={{
-									textTransform: 'uppercase',
-									marginTop: '8px',
-									fontSize: '12px',
-									color: '#8899aa',
-									lineHeight: '0px'
-								}}>and other very cool donors
-									<Icon glyph="external" size={16} style={{
-										transform: 'translate(1px, 3px)'
-									}} />
-								</p>
-							</center>
-						</a>
-					</div>
+						<h2>And:</h2>
+						<div style={{
+							height: '100px',
+							border: '2px solid transparent',
+							marginTop: '10px',
+							background: '#8899aa33',
+							borderRadius: '8px'
+						}} className={styles.sponsor}>
+							<a href="https://bank.hackclub.com/hackbackbetter/donations" target="_blank">
+								<center>
+									<h2 style={{
+										marginBottom: '0px',
+										whiteSpace: 'nowrap',
+										textOverflow: 'ellipsis',
+										width: 'calc(100% - 60px)',
+										overflow: 'hidden'
+									}}>{donor}</h2>
+									<p style={{
+										textTransform: 'uppercase',
+										marginTop: '8px',
+										fontSize: '12px',
+										color: '#8899aa',
+										lineHeight: '0px'
+									}}>and other very cool donors
+										<Icon glyph="external" size={16} style={{
+											transform: 'translate(1px, 3px)'
+										}} />
+									</p>
+								</center>
+							</a>
+						</div>
 					</center>
 
 					<a href="/register" target="_blank">
