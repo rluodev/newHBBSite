@@ -99,6 +99,8 @@ export default async function handler(req, res) {
 				console.log(data);
 				data["uuid"] = uuidv4();
 				data["approved"] = false;
+				data["rejected"] = false;
+				data["waitlisted"] = false;
 				data["Forms Received"] = false;
 				data["ticketed"] = false;
 				data["CheckedIn"] = false;
