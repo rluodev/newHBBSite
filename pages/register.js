@@ -173,11 +173,11 @@ export default function Register() {
 			}}>
 
 				<main className={styles.main}>
-					<h1 className={styles.title} style={{ color: 'black' }}>
+					<h1 className={styles.title} style={{ color: 'black', overflowWrap: 'break-word' }}>
 						HackBackBetter 2023
 						<span style={{ marginLeft: '-6px' }}>{' '}Registration</span><br />
 					</h1>
-					<p className={styles.title} style={{fontSize: '1rem', marginTop: '1rem'}}>Join us on April 22-23 9AM-7PM at the South Bay Yacht Club (Location subject to change) for two fun days of hacking and learning!</p>
+					<p className={styles.title} style={{fontSize: '1rem', marginTop: '1rem', maxWidth: '80%', overflowWrap: 'normal'}}>Join us on April 22-23 9AM-7PM at the South Bay Yacht Club (Location subject to change) for two fun days of hacking and learning!</p>
 					<form onSubmit={e => e.preventDefault()}>
 						{sections.map((section, i) => {
 							return (
