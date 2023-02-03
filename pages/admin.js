@@ -91,8 +91,13 @@ export default function Admin() {
 					}}>
 						<img src="https://cdn.hackbackbetter.live/logo-full-light.png" style={{ maxWidth: '15%', position: 'absolute', bottom: '2rem', right: '2rem' }} />
 						<h1 style={{ marginBottom: '0px' }}>Admin Panel</h1>
+<<<<<<< Updated upstream
 						<p>What would you like to do?</p>
 						<p><a href="/admin/manage" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>Manage Participants</a>  <a href="/admin/tickets" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>Send tickets</a></p>
+=======
+						<p></p>
+						<p><b>What made you leave?</b> We would like to hear any feedback that you have for us, so please send us an email at <a href="mailto:info@hackbackbetter.live" style={{ color: 'var(--purple)', textDecoration: 'underline' }}>info@hackbackbetter.live</a> if you have any!</p>
+>>>>>>> Stashed changes
 					</div>
 				</BigModal>
 				<div style={{
