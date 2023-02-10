@@ -219,6 +219,9 @@ export default function Home() {
 						<a href="https://wolfram.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/WolframLogo.png" />
 						</a>
+						<a href="https://github.com" className={styles.vertCenter}>
+							<svg className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/GitHubLogo.svg" />
+						</a>
 						<a href="https://echo3d.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
 						</a>
