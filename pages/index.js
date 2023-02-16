@@ -225,7 +225,7 @@ export default function Home() {
 						<a href="https://echo3d.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
 						</a>
-						<a href="https://postman.com" className={styles.vertCenter}>
+						<a href="https://www.postman.com/student-program/#student-expert-program" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/postmanLogo.png" />
 						</a>
 						<a href="https://aops.com" className={styles.vertCenter}>
