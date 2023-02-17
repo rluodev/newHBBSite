@@ -225,12 +225,32 @@ export default function Home() {
 						<a href="https://echo3d.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
 						</a>
+						<a href="https://bank.hackclub.com/hackbackbetter/donations" className={styles.vertCenter}>
+							<div style={{
+							border: '2px solid transparent',
+							background: '#8899aa33',
+							borderRadius: '8px',
+							height: '89.336px'
+							}}
+							className={styles.sponsor}> 
+								<center>
+									<h2 style={{
+										marginBottom: '0px',
+										whiteSpace: 'wrap',
+										textOverflow: 'wrap',
+										width: 'calc(100% - 60px)',
+										overflow: 'hidden'
+									}}>The Gilmartin Family</h2>
+								</center>
+							</div>
+						</a>
 						<a href="https://www.postman.com/student-program/#student-expert-program" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/postmanLogo.png" />
 						</a>
 						<a href="https://aops.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/aopsLogo.png" />
 						</a>
+						
 					</center>
 					<center>
 						<h2>And:</h2>
@@ -239,7 +259,9 @@ export default function Home() {
 							border: '2px solid transparent',
 							marginTop: '10px',
 							background: '#8899aa33',
-							borderRadius: '8px'
+							borderRadius: '8px',
+							width: 'auto',
+							maxWidth: '400px'
 						}} className={styles.sponsor}>
 							<a href="https://bank.hackclub.com/hackbackbetter/donations" target="_blank">
 								<center>
