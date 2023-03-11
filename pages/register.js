@@ -178,7 +178,7 @@ export default function Register() {
 						<span style={{ marginLeft: '-6px' }}>{' '}Registration</span><br />
 					</h1>
 					<center>
-						<p className={styles.title} style={{fontSize: '1rem', marginTop: '1rem', maxWidth: '50%', overflowWrap: 'normal'}}>Join us on April 22-23 9AM-7PM at the South Bay Yacht Club (Location subject to change) for two fun days of hacking and learning!</p>
+						<p className={styles.title} style={{fontSize: '1rem', marginTop: '1rem', maxWidth: '50%', overflowWrap: 'normal'}}>Join us on April 22-23 9AM-7PM at Hacker Dojo (855 Maude Ave, Mountain View, CA 94043) for two fun days of hacking and learning!</p>
 					</center>
 					<form onSubmit={e => e.preventDefault()}>
 						{sections.map((section, i) => {

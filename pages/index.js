@@ -188,7 +188,7 @@ export default function Home() {
 							<h2>What are the themes of HackBackBetter?</h2>
 							<p>There are two main themes for HackBackBetter 2023. The first is <span>returning from COVID-19</span>, and the second is <span>environmental preservation</span>.</p>
 							<h2>When and where is HackBackBetter 2023 taking place?</h2>
-							<p>HackBackBetter 2023 will take place on April 22nd-23rd at the South Bay Yacht Club in Alviso, CA (Location subject to change).</p>
+							<p>HackBackBetter 2023 will take place on April 22nd-23rd at Hacker Dojo in Mountain View, CA (855 Maude Ave, Mountain View, CA 94043).</p>
 							<h2>Do you offer any travel stipends/scholarships?</h2>
 							<p>Unfortunately, due to limited funding, we are unable to offer travel stipends or scholarships to any participants at this time. This may change in the future, so please continue checking this page for updates.</p>
 						</div>
@@ -213,18 +213,7 @@ export default function Home() {
 						}}>prospectus</a> to get involved!</p>
 						<br />
 						<h2>HackBackBetter 2023 is made possible thanks to: </h2>
-						<a href="https://doordash.com/" className={styles.vertCenter}>
-							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
-						</a>
-						<a href="https://wolfram.com" className={styles.vertCenter}>
-							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/WolframLogo.png" />
-						</a>
-						<a href="https://github.com" className={styles.vertCenter}>
-							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/GitHubLogo.svg" />
-						</a>
-						<a href="https://echo3d.com" className={styles.vertCenter}>
-							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
-						</a>
+						<h2>Financial Sponsors:</h2>
 						<a href="https://bank.hackclub.com/hackbackbetter/donations" className={styles.vertCenter}>
 							<div style={{
 							border: '2px solid transparent',
@@ -247,10 +236,22 @@ export default function Home() {
 						<a href="https://www.postman.com/student-program/#student-expert-program" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/postmanLogo.png" />
 						</a>
+						<h2>In-Kind Sponsors:</h2>
+						<a href="https://doordash.com/" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DoorDashLogo.png" />
+						</a>
+						<a href="https://wolfram.com" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/WolframLogo.png" />
+						</a>
+						<a href="https://github.com" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/GitHubLogo.svg" />
+						</a>
+						<a href="https://echo3d.com" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/echo3DLogo.png" />
+						</a>
 						<a href="https://aops.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/aopsLogo.png" />
 						</a>
-						
 					</center>
 					<center>
 						<h2>And:</h2>
