@@ -214,6 +214,9 @@ export default function Home() {
 						<br />
 						<h2>HackBackBetter 2023 is made possible thanks to: </h2>
 						<h2>Financial Sponsors:</h2>
+						<a href="https://www.hudsonrivertrading.com/" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/HRTLogo.png" />
+						</a>
 						<a href="https://bank.hackclub.com/hackbackbetter/donations" className={styles.vertCenter}>
 							<div style={{
 							border: '2px solid transparent',
