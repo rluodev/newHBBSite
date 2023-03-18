@@ -207,12 +207,38 @@ export default function Home() {
 				<div className={styles.sponsors}>
 					<center>
 						<h1>Sponsors</h1>
-						<p>We would like to thank our sponsors (listed below) for helping us make this hackathon a reality! Want to be a part of something awesome? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }}>sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
+						<p>We would like to thank our partners and sponsors (listed below) for helping us make this hackathon a reality! Want to be a part of something awesome? Email us at <a href="mailto:sponsor@hackbackbetter.live" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }}>sponsor@hackbackbetter.live</a> or check out our <a href="/prospectus" style={{ color: 'var(--l-purple)', textDecoration: 'underline' }} target="_blank" onClick={e => {
 							e.preventDefault();
 							window.open('https://hackbackbetter.live/prospectus');
 						}}>prospectus</a> to get involved!</p>
 						<br />
 						<h2>HackBackBetter 2023 is made possible thanks to: </h2>
+						<h2>Nonprofit Partners:</h2>
+						<a href="https://www.cpmentorship.org/" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/partner-assets/CPMLogo.png" />
+						</a>
+						<a href="https://www.greenkeepersusa.org/" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/partner-assets/GKLogo.png" />
+						</a>
+						<a target="_blank" className={styles.vertCenter}>
+							<div style={{
+							border: '2px solid transparent',
+							background: '#8899aa33',
+							borderRadius: '8px',
+							height: '89.336px'
+							}}
+							className={styles.sponsor}> 
+								<center>
+									<h2 style={{
+										marginBottom: '0px',
+										whiteSpace: 'wrap',
+										textOverflow: 'wrap',
+										width: 'calc(100% - 60px)',
+										overflow: 'hidden'
+									}}>FTC Biobots #14318</h2>
+								</center>
+							</div>
+						</a>
 						<h2>Financial Sponsors:</h2>
 						<a href="https://www.hudsonrivertrading.com/" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/HRTLogo.png" />
