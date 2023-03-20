@@ -262,6 +262,9 @@ export default function Home() {
 								</center>
 							</div>
 						</a>
+						<a href="https://www.x-camp.academy/" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/XCampLogo.png" />
+						</a>
 						<a href="https://sparkhubfoundation.org/" className={styles.vertCenter}>
 							<div style={{
 							border: '2px solid transparent',
