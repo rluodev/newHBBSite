@@ -220,25 +220,6 @@ export default function Home() {
 						<a href="https://www.greenkeepersusa.org/" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/partner-assets/GKLogo.png" />
 						</a>
-						<a target="_blank" className={styles.vertCenter}>
-							<div style={{
-							border: '2px solid transparent',
-							background: '#8899aa33',
-							borderRadius: '8px',
-							height: '89.336px'
-							}}
-							className={styles.sponsor}> 
-								<center>
-									<h2 style={{
-										marginBottom: '0px',
-										whiteSpace: 'wrap',
-										textOverflow: 'wrap',
-										width: 'calc(100% - 60px)',
-										overflow: 'hidden'
-									}}>FTC Biobots #14318</h2>
-								</center>
-							</div>
-						</a>
 						<h2>Financial Sponsors:</h2>
 						<a href="https://www.hudsonrivertrading.com/" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/HRTLogo.png" />
