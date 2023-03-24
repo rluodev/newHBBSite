@@ -354,7 +354,7 @@ export default function Home() {
 						<a href="mailto:info@hackbackbetter.live">
 							<Icon glyph='email' size={32} />
 						</a>
-						<a href="https://twitter.com" disabled="disabled">
+						<a href="https://twitter.com/HackBackBetter">
 							<Icon glyph='twitter' size={32} />
 						</a>
 					</div>
