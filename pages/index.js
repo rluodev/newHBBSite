@@ -247,23 +247,7 @@ export default function Home() {
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/XCampLogo.png" />
 						</a>
 						<a href="https://sparkhubfoundation.org/" className={styles.vertCenter}>
-							<div style={{
-							border: '2px solid transparent',
-							background: '#8899aa33',
-							borderRadius: '8px',
-							height: '89.336px'
-							}}
-							className={styles.sponsor}> 
-								<center>
-									<h2 style={{
-										marginBottom: '0px',
-										whiteSpace: 'wrap',
-										textOverflow: 'wrap',
-										width: 'calc(100% - 60px)',
-										overflow: 'hidden'
-									}}>Sparkhub Foundation</h2>
-								</center>
-							</div>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/SparkhubLogo.png" />
 						</a>
 						<a href="https://www.postman.com/student-program/#student-expert-program" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/postmanLogo.png" />
