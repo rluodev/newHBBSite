@@ -246,6 +246,9 @@ export default function Home() {
 								</center>
 							</div>
 						</a>
+						<a href="https://hackerone.com/" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/HackerOneLogo.png" />
+						</a>
 						<a href="https://www.x-camp.academy/" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/XCampLogo.png" />
 						</a>
