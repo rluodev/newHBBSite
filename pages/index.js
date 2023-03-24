@@ -221,6 +221,9 @@ export default function Home() {
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/partner-assets/GKLogo.png" />
 						</a>
 						<h2>Financial Sponsors:</h2>
+						<a href="https://newtechsolutions.com/" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/NTSLogo.jpg" />
+						</a>
 						<a href="https://www.hudsonrivertrading.com/" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/HRTLogo.png" />
 						</a>
