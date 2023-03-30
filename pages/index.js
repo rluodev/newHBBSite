@@ -135,7 +135,7 @@ export default function Home() {
 							src="https://cdn.hackbackbetter.live/backgroundimg.png"
 						/>
 						<p className={styles.description}>
-							Come and join us for a weekend of coding, collaboration and over $16,000 dollars in prizes/swag! This event will be located at Hacker Dojo in Mountain View, CA (855 Maude Ave, Mountain View, CA 94043) on April 22-23, 2023 and will run from 9:00 AM to 7:00 PM each day. All participants will receive a swag pack (Including a t-shirt, laptop stickers, 2x $15 DoorDash coupons (sponsored by DoorDash), and etc.).
+							Come and join us for a weekend of coding, collaboration and over $13,000 dollars in prizes/swag! This event will be located at Hacker Dojo in Mountain View, CA (855 Maude Ave, Mountain View, CA 94043) on April 22-23, 2023 and will run from 9:00 AM to 7:00 PM each day. All participants will receive a swag pack (Including a t-shirt, laptop stickers, 2x $15 DoorDash coupons (sponsored by DoorDash), and etc.).
 						</p>
 						<center style={{
 							position: 'relative',
@@ -274,6 +274,9 @@ export default function Home() {
 						<a href="https://janestreet.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/JaneStreetLogo.png" />
 						</a>
+						{{/*<a href="https://pixar.com" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/PixarLogo.png" />
+						</a>*/}}
 						<a href="https://aops.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/aopsLogo.png" />
 						</a>
