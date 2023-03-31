@@ -252,6 +252,9 @@ export default function Home() {
 						<a href="https://www.x-camp.academy/" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/XCampLogo.png" />
 						</a>
+						<a href="https://www.valleywater.org/" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/ValleyWaterLogo.png" />
+						</a>
 						<a href="https://sparkhubfoundation.org/" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/SparkhubLogo.png" />
 						</a>
