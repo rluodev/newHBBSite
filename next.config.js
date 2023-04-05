@@ -31,6 +31,12 @@ const nextConfig = {
         permanent: false
       },
       {
+        source: '/liability',
+        destination: 'https://cdn.hackbackbetter.live/[FIRSTNAME]-[LASTNAME]_HackBackBetter_Event_Liability_Release.pdf',
+        basePath: false,
+        permanent: false
+      },
+      {
         source: '/gh/:repo',
         destination: 'https://github.com/',
         basePath: false,
