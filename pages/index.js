@@ -277,6 +277,9 @@ export default function Home() {
 						<a href="https://janestreet.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/JaneStreetLogo.png" />
 						</a>
+						<a href="https://pixar.com" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/PixarLogo.png" />
+						</a>
 						<a href="https://aops.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/aopsLogo.png" />
 						</a>
