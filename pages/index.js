@@ -268,6 +268,12 @@ export default function Home() {
 						<a href="https://wolfram.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/WolframLogo.png" />
 						</a>
+						<a href="https://porkbun.com" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/PorkbunLogo.png" />
+						</a>
+						<a href="https://identity.digital" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/dotLiveLogo.png" />
+						</a>
 						<a href="https://github.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/GitHubLogo.svg" />
 						</a>

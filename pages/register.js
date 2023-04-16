@@ -148,7 +148,7 @@ export default function Register() {
 	return (
 		<>
 			<Head>
-				<title>Register for HackBackBetter 2023!</title>
+				<title>Register for HackBackBetter 2023! (Waitlist)</title>
 				<meta name="description" content={meta_desc} />
 				<link rel="icon" href="/favicon.ico" />
 				<meta key="og_locale" property="og:locale" content="en_US" />
@@ -175,7 +175,7 @@ export default function Register() {
 				<main className={styles.main}>
 					<h1 className={styles.title} style={{ color: 'black', overflowWrap: 'break-word' }}>
 						HackBackBetter 2023
-						<span style={{ marginLeft: '-6px' }}>{' '}Registration</span><br />
+						<span style={{ marginLeft: '-6px' }}>{' '}Registration (Waitlist)</span><br />
 					</h1>
 					<center>
 						<p className={styles.title} style={{fontSize: '1rem', marginTop: '1rem', maxWidth: '50%', overflowWrap: 'normal'}}>Join us on April 22-23 9AM-7PM at Hacker Dojo (855 Maude Ave, Mountain View, CA 94043) for two fun days of hacking and learning!</p>
