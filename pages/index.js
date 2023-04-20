@@ -274,6 +274,9 @@ export default function Home() {
 						<a href="https://identity.digital" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/dotLiveLogo.png" />
 						</a>
+						<a href="https://digitalocean.com" className={styles.vertCenter}>
+							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/DigitalOceanLogo.png" />
+						</a>
 						<a href="https://github.com" className={styles.vertCenter}>
 							<img className={styles.sponsor} src="https://cdn.hackbackbetter.live/sponsor-assets/GitHubLogo.svg" />
 						</a>
